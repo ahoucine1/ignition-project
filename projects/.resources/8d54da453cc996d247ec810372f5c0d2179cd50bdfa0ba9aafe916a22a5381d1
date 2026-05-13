@@ -1,0 +1,1 @@
+SELECT  t_stamp , tagid , floatvalue  FROM sqlt_data_1_2026_04

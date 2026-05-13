@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "uuid": "f39addc9-73b7-4267-876e-7979160accfb",
+      "username": "admin",
+      "schedule": "Always",
+      "password": "[120377ea]719f282fc1711f2555f3791e21110cb050651505c5eb43d801ec4dc6201e2242",
+      "passwordDate": "20260313.094848861+0100",
+      "passwordHistory": [],
+      "createdDate": "20260313.094848853+0100",
+      "lastModifiedDate": "20260313.094848853+0100",
+      "roles": [
+        "9ea52c65-965b-4faf-ae4d-6990f528ca64"
+      ],
+      "extraProps": [],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    },
+    {
+      "uuid": "20fda66e-5e92-4473-8c25-eaf5167b4e00",
+      "username": "mbensaid",
+      "firstName": "MBENSAID",
+      "lastName": "",
+      "schedule": "Always",
+      "description": "",
+      "password": "[19AC56EA]6b0b7eac80cffa83527b9a499508a8e30aa9aab4f05c6dc538efe98d1d80f3ad",
+      "passwordDate": "20260313.101342548+0100",
+      "passwordHistory": [],
+      "badge": "",
+      "createdDate": "20260313.101342547+0100",
+      "lastModifiedDate": "20260313.101355105+0100",
+      "roles": [
+        "9ea52c65-965b-4faf-ae4d-6990f528ca64"
+      ],
+      "extraProps": [
+        {
+          "propertyKey": "user.pin",
+          "propertyValue": ""
+        }
+      ],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    },
+    {
+      "uuid": "edfc524f-fcba-4d79-8f58-4fc98b5e6c09",
+      "username": "cferjani",
+      "firstName": "Chaima Ferjani",
+      "lastName": "",
+      "schedule": "Always",
+      "description": "",
+      "password": "[DAB91A1D]ebbaffda24218243eb6c0abd6d145d039f03db4337f25c7ac321feac007b77b8",
+      "passwordDate": "20260313.104728742+0100",
+      "passwordHistory": [],
+      "badge": "",
+      "createdDate": "20260313.104728741+0100",
+      "lastModifiedDate": "20260313.104759833+0100",
+      "roles": [
+        "9ea52c65-965b-4faf-ae4d-6990f528ca64"
+      ],
+      "extraProps": [
+        {
+          "propertyKey": "user.pin",
+          "propertyValue": ""
+        }
+      ],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    }
+  ],
+  "roles": [
+    {
+      "uuid": "9ea52c65-965b-4faf-ae4d-6990f528ca64",
+      "rolename": "Administrator",
+      "createdDate": "20260313.094848853+0100",
+      "lastModifiedDate": "20260313.104759699+0100"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "connectURL": "jdbc:postgresql://localhost:5432/ah_training_db",
+  "connectionProps": "",
+  "connectionResetParams": "",
+  "defaultTransactionLevel": "DEFAULT",
+  "driver": "PostgreSQL",
+  "evictionRate": -1,
+  "evictionTests": 3,
+  "evictionTime": 1800000,
+  "failoverMode": "STANDARD",
+  "failoverProfile": "",
+  "includeSchemaInTableName": false,
+  "password": {
+    "data": {
+      "ciphertext": "0rrTY71ej7UpxgAEeQ",
+      "encrypted_key": "lof5mfR60Fx_CMiVa5gPopzBI2MyxO2L-7QdKpf0BkH_7O6j8bmIyg",
+      "iv": "YyhRD7LT_FEw2esJ",
+      "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzczOTExMjU4LCJ6aXAiOiJERUYifQ",
+      "tag": "GgdB4zEHZhcg7zMzu9m8Zg"
+    },
+    "type": "Embedded"
+  },
+  "poolInitSize": 0,
+  "poolMaxActive": 8,
+  "poolMaxIdle": 8,
+  "poolMaxWait": 5000,
+  "poolMinIdle": 0,
+  "slowQueryLogThreshold": 60000,
+  "testOnBorrow": true,
+  "testOnReturn": false,
+  "testWhileIdle": false,
+  "translator": "POSTGRES",
+  "username": "ah_user",
+  "validationQuery": "SELECT 1",
+  "validationSleepTime": 10000
+}

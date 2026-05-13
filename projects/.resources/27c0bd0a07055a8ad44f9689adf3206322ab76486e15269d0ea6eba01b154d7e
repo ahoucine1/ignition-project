@@ -1,0 +1,35 @@
+{
+  "pages": {
+    "/": {
+      "title": "",
+      "viewPath": ""
+    },
+    "/browse_mqtt": {
+      "title": "",
+      "viewPath": "browse_mqtt"
+    },
+    "/uns": {
+      "title": "",
+      "viewPath": "browse_uns"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "left-right",
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 150,
+        "viewParams": {},
+        "viewPath": "Horizontal-Menu-Nav"
+      }
+    ]
+  }
+}

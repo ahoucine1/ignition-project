@@ -1,0 +1,23 @@
+[
+  {
+    "usr": {
+      "dataType": "Int4"
+    },
+    "name": "High alarm",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Int4"
+    },
+    "name": "Mode",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Int4"
+    },
+    "name": "Low alarm",
+    "tagType": "AtomicTag"
+  }
+]

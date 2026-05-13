@@ -1,0 +1,7 @@
+{
+  "title": "Sandalwood Ignition API",
+  "description": "Webdev module - Sandalwood API\n",
+  "enabled": true,
+  "inheritable": false,
+  "parent": ""
+}

@@ -1,0 +1,30 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TagBrowseTree"
+        },
+        "position": {
+          "height": 475,
+          "width": 353,
+          "x": 18,
+          "y": 27
+        },
+        "props": {
+          "root": {
+            "path": "[UNS]"
+          }
+        },
+        "type": "ia.display.tag-browse-tree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

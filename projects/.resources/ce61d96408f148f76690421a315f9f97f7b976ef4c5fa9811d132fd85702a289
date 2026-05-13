@@ -1,0 +1,106 @@
+{
+  "custom": {
+    "selectedTagPath": "\"select tag path\""
+  },
+  "params": {},
+  "propConfig": {
+    "custom.selectedTagPath": {
+      "access": "PUBLIC",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onSelect": {
+              "config": {
+                "script": "    system.perspective.sendMessage(\"toast\", {\n        \"message\": \"onSelect fired!\",\n        \"severity\": \"info\",\n        \"duration\": 1000\n    })\n    keys \u003d event.source.selectedKeys\n    if keys and len(keys) \u003e 0:\n        self.view.custom.selectedTagPath \u003d keys[0]\n    else:\n        self.view.custom.selectedTagPath \u003d \"\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "TagBrowseTree"
+        },
+        "position": {
+          "height": 491,
+          "width": 330
+        },
+        "props": {
+          "root": {
+            "path": "[MQTT Engine]Edge Nodes"
+          }
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": [
+            {
+              "enabled": true,
+              "name": "filterBrowseNode",
+              "script": "\treturn True"
+            }
+          ],
+          "messageHandlers": []
+        },
+        "type": "ia.display.tag-browse-tree"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tsystem.perspective.sendMessage(\"toast\", {\"message\": \"Button works!\"})"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 34,
+          "width": 126,
+          "x": 465,
+          "y": 414
+        },
+        "props": {
+          "text": "copy tag path"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 537,
+          "y": 108
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.selectedTagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

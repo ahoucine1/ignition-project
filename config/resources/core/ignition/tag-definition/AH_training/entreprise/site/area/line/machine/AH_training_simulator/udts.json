@@ -1,0 +1,13 @@
+[
+  {
+    "name": "sensor 1",
+    "typeId": "sensor",
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": "[MQTT Engine]Edge Nodes/group1/node1/device1/Sensor 1"
+      }
+    },
+    "tagType": "UdtInstance"
+  }
+]

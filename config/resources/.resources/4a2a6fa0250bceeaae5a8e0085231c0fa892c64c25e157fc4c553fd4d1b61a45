@@ -1,0 +1,746 @@
+[
+  {
+    "name": "UDT_CapsuleFiller",
+    "typeId": "UDT_Equipment_Base",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/CapsuleSize"
+        },
+        "valueSource": "reference",
+        "dataType": "Float8",
+        "name": "CapsuleSize",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/CapsulesPerMinute"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "CapsulesPerMinute ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/FillWeight"
+        },
+        "valueSource": "reference",
+        "dataType": "Float8",
+        "name": "FillWeight ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/TotalCapsules"
+        },
+        "valueSource": "reference",
+        "name": "TotalCapsules ",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "UDT_PackagingMachine ",
+    "typeId": "UDT_Equipment_Base",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/PackType"
+        },
+        "valueSource": "reference",
+        "dataType": "String",
+        "name": "PackType ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/TotalUnits"
+        },
+        "valueSource": "reference",
+        "name": "TotalUnits ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/UnitsPerMinute"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "UnitsPerMinute ",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "BaseUDT",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "Location",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "reference",
+            "name": "Entreprise",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Line",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Site",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Area",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Machine",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "Machine Data",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "reference",
+            "name": "Machine_ID",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Status",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Changed_by",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "LastStart",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "SchemaVersion",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Laststop",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Created_by",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "OEE",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "reference",
+            "name": "Shoplfoor_Count_Type",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Source_Timestamp ",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "OEE_Count_Method",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "TagName",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "OEE_Count_Type",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Shoplfoor_Count",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Is_Bottleneck ",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Count_Event_ID ",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "UOM",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "SourceName",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Timestamp",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "ack_Timestamp",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "OEE_Count",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Shoplfoor_Count_Method",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AKTA_UDT",
+    "typeId": "BaseUDT",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "Alarms",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "name": "Delta column pressure",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "Mode",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "High alarm",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Low alarm",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "UV 2nd",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "Mode",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "High alarm",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Low alarm",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Conductivity ",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "Mode",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "High alarm",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Low alarm",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "pre column pressure",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "High alarm",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Low alarm",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Mode",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "UV1",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "Mode",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "High alarm",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Low alarm",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Conductivity 2nd",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "Low alarm",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "High alarm",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Mode",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "sample pressure",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "Low alarm",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Mode",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "High alarm",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "pH",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "Mode",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Low alarm",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "High alarm",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "system pressure",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "High alarm",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Low alarm",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Mode",
+                "tagType": "AtomicTag"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "batch data",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "reference",
+            "name": "RunLog ",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Current batchId",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Current method",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Current block",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Current result",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "core measurements",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "reference",
+            "name": "Pre column pressure",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Concentration Quaternary2",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "UV 3",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "pH",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Post column pressure",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "UV 1",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Accumulated time",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "System pressure",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "UV 2",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Fraction temperature",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Accumulated volume",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Sample pressure",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Concentration Quaternary3",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Concentration Quaternary1",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Delta column pressure",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Conductivity",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Concentration Quaternary4",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "System flow",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Sample flow",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Concentration Buffer",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "system and process State",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "reference",
+            "name": "Command",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "UserInControl ",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "InstrumentConnection",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "InstrumentStatusConnection",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "AssignState",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "RunState",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "UDT_TabletPress",
+    "typeId": "UDT_Equipment_Base",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/CompressionForce"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "CompressionForce ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/TabletWeight"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "TabletWeight ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/TabletsPerMinute"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "TabletsPerMinute ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/Thickness"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "Thickness ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/TotalTablets"
+        },
+        "valueSource": "reference",
+        "name": "TotalTablets ",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "UDT_Equipment_Base",
+    "typeId": null,
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/EquipmentID"
+        },
+        "valueSource": "reference",
+        "name": "EquipmentID ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/EquipmentName"
+        },
+        "valueSource": "reference",
+        "dataType": "String",
+        "name": "EquipmentName ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/Timestamp"
+        },
+        "valueSource": "reference",
+        "dataType": "DateTime",
+        "name": "Timestamp ",
+        "formatString": "yyyy-MM-dd h:mm:ss aa",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "sensor",
+    "typeId": null,
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/Humidity"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "Humidity",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/Temperature"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "Temperature",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

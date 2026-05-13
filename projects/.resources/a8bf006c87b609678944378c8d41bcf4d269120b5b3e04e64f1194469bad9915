@@ -1,0 +1,341 @@
+{
+  "custom": {
+    "errorMessage": "Please fill in all fields and select a source tag.",
+    "selectedTagPath": "\"select tag path\""
+  },
+  "params": {},
+  "propConfig": {
+    "custom.selectedTagPath": {
+      "access": "PUBLIC",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t# ---------------------------------------------------\n\t# GET VALUES FROM VIEW\n\t# ---------------------------------------------------\n\t\n\tmachine_type \u003d self.getSibling(\"Dropdown\").props.value\n\tsite \u003d self.getSibling(\"site\").props.text\n\tarea \u003d self.getSibling(\"area\").props.text\n\tline \u003d self.getSibling(\"line\").props.text\n\tmachine \u003d self.getSibling(\"machine\").props.text\n\tinstance_name \u003d self.getSibling(\"instance_name\").props.text\n\t\n\tselection \u003d self.getSibling(\"TagBrowseTree\").props.selection.values\n\t\n\t# ---------------------------------------------------\n\t# VALIDATION\n\t# ---------------------------------------------------\n\t\n\tselection \u003d self.getSibling(\"TagBrowseTree\").props.selection.values\n\n\tif (\n\t    not machine_type or\n\t    not site or\n\t    not area or\n\t    not line or\n\t    not machine or\n\t    not instance_name or\n\t    not selection or\n\t    len(selection) \u003d\u003d 0\n\t):\n\t\n\t    system.perspective.openPopup(\n\t        id\u003d\"validationPopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\n\t            \"display\": \"Please fill in all fields and select a source tag.\"\n\t        },\n\t        title\u003d\"Error\",\n\t        modal\u003dTrue\n\t    )\n\t\n\t    return\n\t\n\t# ---------------------------------------------------\n\t# SAFE SOURCE TAG\n\t# ---------------------------------------------------\n\t\n\tsource_tag_path \u003d str(selection[0])\n\t\n\t# ---------------------------------------------------\n\t# BUILD PATH\n\t# ---------------------------------------------------\n\t\n\tuns_provider \u003d \"UNS\"\n\t\n\tbase_path \u003d \"[{}]/Pharma/{}/{}/{}/{}\".format(\n\t    uns_provider,\n\t    site,\n\t    area,\n\t    line,\n\t    machine\n\t)\n\t\n\tinstance_path \u003d \"{}/{}\".format(base_path, instance_name)\n\t\n\tudt_type_path \u003d machine_type\n\t\n\t# ---------------------------------------------------\n\t# CHECK DUPLICATE\n\t# ---------------------------------------------------\n\t\n\tif system.tag.exists(instance_path):\n\t\n\t    system.perspective.openPopup(\n\t        id\u003d\"duplicatePopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\n\t            \"display\": \"Machine \u0027{}\u0027 already exists in this location.\".format(instance_name)\n\t        },\n\t        title\u003d\"Duplicate Error\",\n\t        modal\u003dTrue\n\t    )\n\t\n\t    return\n\t\n\t# ---------------------------------------------------\n\t# CREATE UDT INSTANCE\n\t# ---------------------------------------------------\n\t\n\ttry:\n\t\n\t    tag_definition \u003d {\n\t        \"name\": instance_name,\n\t        \"tagType\": \"UdtInstance\",\n\t        \"typeId\": udt_type_path,\n\t        \"parameters\": {\n\t            \"site\": site,\n\t            \"area\": area,\n\t            \"line\": line,\n\t            \"machine\": machine,\n\t            \"source\": source_tag_path\n\t        }\n\t    }\n\t\n\t    system.tag.configure(base_path, [tag_definition])\n\t    self.getSibling(\"TagBrowseTree\").props.selection \u003d {\n    \t\"values\": []\n\t\t}\n\t\n\t    # ---------------------------------------------------\n\t    # SUCCESS POPUP\n\t    # ---------------------------------------------------\n\t\n\t    system.perspective.openPopup(\n\t        id\u003d\"validationPopup\",\n\t        view\u003d\"ValidationPopup\",\n\t        params\u003d{\n\t            \"instance_path\": instance_path\n\t        },\n\t        title\u003d\"Validation\",\n\t        modal\u003dTrue\n\t    )\n\t\n\texcept Exception as e:\n\t\n\t    # ---------------------------------------------------\n\t    # ERROR POPUP\n\t    # ---------------------------------------------------\n\t\n\t    system.perspective.openPopup(\n\t        id\u003d\"errorPopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\n\t            \"display\": \"Error creating machine: {}\".format(str(e))\n\t        },\n\t        title\u003d\"Error\",\n\t        modal\u003dTrue\n\t    )"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 34,
+          "width": 126,
+          "x": 126.5,
+          "y": 526
+        },
+        "props": {
+          "text": "create new machine"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "height": 36,
+          "width": 256,
+          "x": 384,
+          "y": 473
+        },
+        "props": {
+          "options": [
+            {
+              "label": "AKTA Model",
+              "value": "[UNS]_types_/AKTA_Chromatography"
+            },
+            {
+              "label": "Sensor udt",
+              "value": "[UNS]_types_/sensor"
+            }
+          ],
+          "placeholder": {
+            "text": "Select Machine Type"
+          }
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 411.33,
+          "y": 39
+        },
+        "props": {
+          "text": "Site:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 409.33,
+          "y": 122
+        },
+        "props": {
+          "text": "Area:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 408.33,
+          "y": 203
+        },
+        "props": {
+          "text": "Line:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 32,
+          "width": 81,
+          "x": 408.33,
+          "y": 281
+        },
+        "props": {
+          "text": "Machine:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_4"
+        },
+        "position": {
+          "height": 32,
+          "width": 140,
+          "x": 408.33,
+          "y": 354.33
+        },
+        "props": {
+          "text": "Instance Name:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "site"
+        },
+        "position": {
+          "height": 32,
+          "width": 235,
+          "x": 389.334,
+          "y": 79.6529
+        },
+        "props": {
+          "placeholder": "enter site"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "area"
+        },
+        "position": {
+          "height": 32,
+          "width": 235,
+          "x": 390.6666793823242,
+          "y": 157.32999999999998
+        },
+        "props": {
+          "placeholder": "enter area"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "line"
+        },
+        "position": {
+          "height": 32,
+          "width": 235,
+          "x": 390.6666793823242,
+          "y": 235.32999999999998
+        },
+        "props": {
+          "placeholder": "enter line"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "machine"
+        },
+        "position": {
+          "height": 32,
+          "width": 235,
+          "x": 390.6666793823242,
+          "y": 318.33
+        },
+        "props": {
+          "placeholder": "enter machine"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "instance_name"
+        },
+        "position": {
+          "height": 32,
+          "width": 235,
+          "x": 390.6666793823242,
+          "y": 391.33
+        },
+        "props": {
+          "placeholder": "enter instance name"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "Label",
+          "visible": false
+        },
+        "position": {
+          "height": 32,
+          "width": 279,
+          "x": 160,
+          "y": 609
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "../TagBrowseTree.props.selection.values"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tself.getSibling(\"TagBrowseTree\").props.selection \u003d {}"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_1",
+          "visible": false
+        },
+        "position": {
+          "height": 34,
+          "width": 121,
+          "x": 428.33,
+          "y": 517
+        },
+        "props": {
+          "text": "clear selection"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Label_5"
+        },
+        "position": {
+          "height": 32,
+          "width": 214,
+          "x": 13,
+          "y": 7
+        },
+        "props": {
+          "text": "Add New Machine"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_6"
+        },
+        "position": {
+          "height": 32,
+          "width": 174,
+          "x": 404.33,
+          "y": 431.65
+        },
+        "props": {
+          "text": "Select Machine Model"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "TagBrowseTree"
+        },
+        "position": {
+          "height": 443,
+          "width": 346,
+          "x": 16,
+          "y": 55
+        },
+        "props": {
+          "root": {
+            "path": "[MQTT Engine]Edge Nodes"
+          },
+          "selection": {}
+        },
+        "type": "ia.display.tag-browse-tree"
+      }
+    ],
+    "events": {
+      "system": {
+        "onStartup": {
+          "config": {
+            "script": "\tself.getChild(\"TagBrowseTree\").props.selection \u003d {\"values\": []}"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "width": "100%"
+      }
+    },
+    "position": {
+      "x": 11.32293701171875,
+      "y": 4.645833969116211
+    },
+    "type": "ia.container.coord"
+  }
+}

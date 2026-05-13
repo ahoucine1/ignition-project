@@ -1,0 +1,92 @@
+[
+  {
+    "name": "AH_training_simulator sensor 2",
+    "typeId": "sensor",
+    "parameters": {
+      "device name": {
+        "dataType": "String",
+        "value": "AH_training_simulator"
+      },
+      "sensor num": {
+        "dataType": "Integer",
+        "value": 2
+      }
+    },
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "AH_training_simulator_2 sensor 3",
+    "typeId": "sensor",
+    "parameters": {
+      "device name": {
+        "dataType": "String",
+        "value": "AH_training_simulator_2"
+      },
+      "sensor num": {
+        "dataType": "Integer",
+        "value": 3
+      }
+    },
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "AH_training_simulator_2 sensor 2",
+    "typeId": "sensor",
+    "parameters": {
+      "device name": {
+        "dataType": "String",
+        "value": "AH_training_simulator_2"
+      },
+      "sensor num": {
+        "dataType": "Integer",
+        "value": 2
+      }
+    },
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "AH_training_simulator_2 sensor 1",
+    "typeId": "sensor",
+    "parameters": {
+      "device name": {
+        "dataType": "String",
+        "value": "AH_training_simulator_2"
+      },
+      "sensor num": {
+        "dataType": "Integer",
+        "value": 1
+      }
+    },
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "AH_training_simulator sensor 3",
+    "typeId": "sensor",
+    "parameters": {
+      "device name": {
+        "dataType": "String",
+        "value": "AH_training_simulator"
+      },
+      "sensor num": {
+        "dataType": "Integer",
+        "value": 3
+      }
+    },
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "AH_training_simulator sensor 1",
+    "typeId": "sensor",
+    "parameters": {
+      "device name": {
+        "dataType": "String",
+        "value": "AH_training_simulator"
+      },
+      "sensor num": {
+        "dataType": "Integer",
+        "value": 1
+      }
+    },
+    "tagType": "UdtInstance"
+  }
+]

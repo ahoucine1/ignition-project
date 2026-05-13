@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "Logo_WYNSYS_vectoriel.svg"
+  ],
+  "attributes": {
+    "width": 842,
+    "format": "SVG",
+    "lastModification": {
+      "actor": "ahoucine",
+      "timestamp": "2026-05-11T14:13:36Z"
+    },
+    "size": 25139,
+    "lastModificationSignature": "28a45d60dccac42a023b90bec98df92676bc22d020fd77cb4c7b11f59e3a132a",
+    "height": 141
+  }
+}

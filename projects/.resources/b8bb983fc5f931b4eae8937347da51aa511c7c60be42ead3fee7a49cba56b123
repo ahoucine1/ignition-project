@@ -1,0 +1,91 @@
+{
+  "custom": {},
+  "params": {
+    "TagTreePath": "[UNS]",
+    "instance_path": ""
+  },
+  "propConfig": {
+    "params.TagTreePath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.instance_path": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 400,
+      "width": 400
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TagBrowseTree"
+        },
+        "position": {
+          "height": 366,
+          "width": 235,
+          "x": 10,
+          "y": 15
+        },
+        "propConfig": {
+          "props.root.path": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagTreePath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "root": {}
+        },
+        "type": "ia.display.tag-browse-tree"
+      },
+      {
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 34,
+          "width": 132,
+          "x": 261,
+          "y": 243
+        },
+        "props": {
+          "text": "validate creation"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Button_0"
+        },
+        "position": {
+          "height": 34,
+          "width": 134,
+          "x": 259,
+          "y": 298
+        },
+        "props": {
+          "image": {
+            "style": {
+              "colour": "red"
+            }
+          },
+          "text": "decline creation"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

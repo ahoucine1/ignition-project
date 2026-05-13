@@ -1,0 +1,29 @@
+[
+  {
+    "name": "test",
+    "typeId": "[UNS]_types_/AKTA_Chromatography",
+    "parameters": {
+      "area": {
+        "dataType": "String",
+        "value": "area1"
+      },
+      "site": {
+        "dataType": "String",
+        "value": "sire1"
+      },
+      "line": {
+        "dataType": "String",
+        "value": "Line 1"
+      },
+      "machine": {
+        "dataType": "String",
+        "value": "sensor"
+      },
+      "source": {
+        "dataType": "String",
+        "value": "[MQTT Engine]Edge Nodes/group1/node1/device1/Motor 7"
+      }
+    },
+    "tagType": "UdtInstance"
+  }
+]

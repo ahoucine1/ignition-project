@@ -1,0 +1,7 @@
+{
+  "defaultTagsEnabled": true,
+  "namespaceType": "Elecsys",
+  "subscription": "tags/#,RBE/#,JPG/#,sys/#,cmd/#",
+  "unsFolderPrefix": "UNS",
+  "unsTagsEnabled": false
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "camera2.png"
+  ],
+  "attributes": {
+    "width": 48,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "import",
+      "timestamp": "2026-03-13T08:50:07Z"
+    },
+    "size": 1651,
+    "lastModificationSignature": "209279c7bcf1e7f4b9e04cca4e16a44d215e090019cc2947d5062919c7f28d88",
+    "height": 48
+  }
+}

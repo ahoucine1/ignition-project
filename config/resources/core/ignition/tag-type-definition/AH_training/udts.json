@@ -1,0 +1,216 @@
+[
+  {
+    "name": "UDT_PackagingMachine ",
+    "typeId": "UDT_Equipment_Base",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/PackType"
+        },
+        "valueSource": "reference",
+        "dataType": "String",
+        "name": "PackType ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/TotalUnits"
+        },
+        "valueSource": "reference",
+        "name": "TotalUnits ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/UnitsPerMinute"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "UnitsPerMinute ",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "sensor",
+    "typeId": null,
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/Humidity"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "Humidity",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/Temperature"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "Temperature",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "UDT_Equipment_Base",
+    "typeId": null,
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/EquipmentID"
+        },
+        "valueSource": "reference",
+        "name": "EquipmentID ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/EquipmentName"
+        },
+        "valueSource": "reference",
+        "dataType": "String",
+        "name": "EquipmentName ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/Timestamp"
+        },
+        "valueSource": "reference",
+        "dataType": "DateTime",
+        "name": "Timestamp ",
+        "formatString": "yyyy-MM-dd h:mm:ss aa",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "UDT_TabletPress",
+    "typeId": "UDT_Equipment_Base",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/CompressionForce"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "CompressionForce ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/TabletWeight"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "TabletWeight ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/TabletsPerMinute"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "TabletsPerMinute ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/Thickness"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "Thickness ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/TotalTablets"
+        },
+        "valueSource": "reference",
+        "name": "TotalTablets ",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "UDT_CapsuleFiller",
+    "typeId": "UDT_Equipment_Base",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/CapsuleSize"
+        },
+        "valueSource": "reference",
+        "dataType": "Float8",
+        "name": "CapsuleSize",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/CapsulesPerMinute"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "CapsulesPerMinute ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/FillWeight"
+        },
+        "valueSource": "reference",
+        "dataType": "Float8",
+        "name": "FillWeight ",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/TotalCapsules"
+        },
+        "valueSource": "reference",
+        "name": "TotalCapsules ",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

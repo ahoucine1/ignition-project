@@ -1,0 +1,29 @@
+[
+  {
+    "name": "sensor 1",
+    "typeId": "[UNS]_types_/sensor",
+    "parameters": {
+      "area": {
+        "dataType": "String",
+        "value": "area2"
+      },
+      "site": {
+        "dataType": "String",
+        "value": "site2"
+      },
+      "line": {
+        "dataType": "String",
+        "value": "Line1"
+      },
+      "machine": {
+        "dataType": "String",
+        "value": "sensor machine"
+      },
+      "source": {
+        "dataType": "String",
+        "value": "\u003cArrayWrapper\u003e: [u\u0027[MQTT Engine]Edge Nodes/group1/node1/device1/Sensor 1\u0027]"
+      }
+    },
+    "tagType": "UdtInstance"
+  }
+]

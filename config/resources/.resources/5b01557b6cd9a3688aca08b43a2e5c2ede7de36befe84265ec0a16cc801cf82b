@@ -1,0 +1,19 @@
+[
+  {
+    "valueSource": "memory",
+    "name": "Mode",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "name": "az",
+    "defaultValue": 1,
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "name": "Low alarm",
+    "defaultValue": 1,
+    "tagType": "AtomicTag"
+  }
+]

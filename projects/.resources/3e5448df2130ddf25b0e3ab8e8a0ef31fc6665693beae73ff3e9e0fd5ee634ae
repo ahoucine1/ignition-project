@@ -1,0 +1,106 @@
+{
+  "custom": {
+    "selectedTagPath": ""
+  },
+  "params": {},
+  "propConfig": {
+    "custom.selectedTagPath": {
+      "access": "PUBLIC",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onSelect": {
+              "config": {
+                "script": "\tkeys \u003d event.source.selectedKeys\n\tif keys and len(keys) \u003e 0:\n\t    self.view.custom.selectedTagPath \u003d keys[0]\n\telse:\n\t    self.view.custom.selectedTagPath \u003d \"\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "TagBrowseTree"
+        },
+        "position": {
+          "height": 491,
+          "width": 330
+        },
+        "props": {
+          "root": {
+            "path": "[MQTT Engine]Edge Nodes"
+          }
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": [
+            {
+              "enabled": true,
+              "name": "filterBrowseNode",
+              "script": "return True"
+            }
+          ],
+          "messageHandlers": []
+        },
+        "type": "ia.display.tag-browse-tree"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t# Retrieve the currently selected tag path from the view\u0027s custom property\n\ttagPath \u003d view.custom.selectedTagPath\n\t\n\tif tagPath:\n\t    # Copy the tag path to clipboard\n\t    system.perspective.sendClipboard(tagPath)\n\t    \n\t    # Optional: Show a confirmation toast\n\t    system.perspective.sendMessage(\"toast\", {\n\t        \"message\": \"Tag path copied: \" + tagPath,\n\t        \"severity\": \"success\",\n\t        \"duration\": 2000\n\t    })\n\telse:\n\t    # No tag selected, show a warning\n\t    system.perspective.sendMessage(\"toast\", {\n\t        \"message\": \"No tag selected. Please select a tag from the tree first.\",\n\t        \"severity\": \"warning\",\n\t        \"duration\": 3000\n\t    })"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 34,
+          "width": 126,
+          "x": 465,
+          "y": 414
+        },
+        "props": {
+          "text": "copy tag path"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 537,
+          "y": 108
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.selectedTagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

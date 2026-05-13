@@ -1,0 +1,12 @@
+[
+  {
+    "name": "tablet press 1",
+    "typeId": "UDT_TabletPress",
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "capsule filler 1",
+    "typeId": "UDT_CapsuleFiller",
+    "tagType": "UdtInstance"
+  }
+]

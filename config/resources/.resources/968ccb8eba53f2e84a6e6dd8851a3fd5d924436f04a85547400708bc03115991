@@ -1,0 +1,16 @@
+[
+  {
+    "usr": {
+      "dataType": "Int4"
+    },
+    "name": "Example Tag",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "MQTT Quickstart",
+    "tagType": "AtomicTag"
+  }
+]

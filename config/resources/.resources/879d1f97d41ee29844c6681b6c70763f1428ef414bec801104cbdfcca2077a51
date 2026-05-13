@@ -1,0 +1,24 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "unit": "C",
+      "dataType": "Float8",
+      "documentation": "{\"unit\" : \"C\"}",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "Temperature",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Float8",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "Humidity",
+    "tagType": "AtomicTag"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "name": "sesonr 3",
+    "typeId": "sensor",
+    "parameters": {
+      "sensor num": {
+        "dataType": "Integer",
+        "value": 3
+      }
+    },
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "sesonr 2",
+    "typeId": "sensor",
+    "parameters": {
+      "sensor num": {
+        "dataType": "Integer",
+        "value": 2
+      }
+    },
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "sesonr 1",
+    "typeId": "sensor",
+    "parameters": {
+      "sensor num": {
+        "dataType": "Integer",
+        "value": 1
+      }
+    },
+    "tagType": "UdtInstance"
+  }
+]

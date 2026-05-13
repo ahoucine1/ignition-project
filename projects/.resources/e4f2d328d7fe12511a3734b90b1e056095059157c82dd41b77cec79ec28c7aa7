@@ -1,0 +1,95 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 307,
+      "width": 894
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "HorizontalMenu"
+                },
+                "position": {
+                  "height": 1,
+                  "width": 1
+                },
+                "props": {
+                  "items": [
+                    {
+                      "enabled": true,
+                      "icon": {
+                        "path": ""
+                      },
+                      "items": [],
+                      "label": "Browse MQTT Tags",
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/browse_mqtt"
+                    },
+                    {
+                      "enabled": true,
+                      "icon": {
+                        "path": ""
+                      },
+                      "items": [],
+                      "label": "Create New UDTs",
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/create_udt"
+                    },
+                    {
+                      "enabled": true,
+                      "icon": {
+                        "path": ""
+                      },
+                      "items": [],
+                      "label": "UNS",
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/uns"
+                    }
+                  ]
+                },
+                "type": "ia.navigation.horizontalmenu"
+              }
+            ],
+            "meta": {
+              "name": "CoordinateContainer"
+            },
+            "position": {
+              "size": "large"
+            },
+            "props": {
+              "mode": "percent"
+            },
+            "type": "ia.container.coord"
+          }
+        ],
+        "meta": {
+          "name": "BreakpointContainer"
+        },
+        "position": {
+          "height": 114,
+          "width": 800,
+          "y": 2
+        },
+        "type": "ia.container.breakpt"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

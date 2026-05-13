@@ -1,0 +1,30 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TagBrowseTree"
+        },
+        "position": {
+          "height": 400,
+          "width": 235,
+          "x": 34,
+          "y": 43
+        },
+        "props": {
+          "root": {
+            "path": "[MQTT Engine]Edge Nodes"
+          }
+        },
+        "type": "ia.display.tag-browse-tree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

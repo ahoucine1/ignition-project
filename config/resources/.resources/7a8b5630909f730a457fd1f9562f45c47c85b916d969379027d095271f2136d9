@@ -1,0 +1,24 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "My MQTT Group",
+      "readOnly": false,
+      "dataType": "Int4",
+      "SparkplugDeviceId": "PLC 1",
+      "SparkplugEdgeNodeId": "Edge Node 7a42a6"
+    },
+    "name": "Example Tag",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "My MQTT Group",
+      "readOnly": true,
+      "dataType": "String",
+      "SparkplugDeviceId": "PLC 1",
+      "SparkplugEdgeNodeId": "Edge Node 7a42a6"
+    },
+    "name": "MQTT Quickstart",
+    "tagType": "AtomicTag"
+  }
+]

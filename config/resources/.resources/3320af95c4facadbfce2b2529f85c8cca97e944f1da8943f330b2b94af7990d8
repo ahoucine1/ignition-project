@@ -1,0 +1,10 @@
+[
+  {
+    "usr": {
+      "readOnly": true,
+      "dataType": "Boolean"
+    },
+    "name": "Delete UNS Tags",
+    "tagType": "AtomicTag"
+  }
+]

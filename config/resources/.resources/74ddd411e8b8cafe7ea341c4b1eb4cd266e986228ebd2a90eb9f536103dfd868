@@ -1,0 +1,32 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group2",
+      "dataType": "Float8",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node2"
+    },
+    "name": "Low alarm",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group2",
+      "dataType": "Int4",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node2"
+    },
+    "name": "Mode",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group2",
+      "dataType": "Float8",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node2"
+    },
+    "name": "High alarm",
+    "tagType": "AtomicTag"
+  }
+]

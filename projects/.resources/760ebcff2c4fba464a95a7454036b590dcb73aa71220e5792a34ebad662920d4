@@ -1,0 +1,1 @@
+SELECT * FROM (SELECT 'Apple' AS Food, 5 AS Amount UNION ALL SELECT 'Banana', 3 UNION ALL SELECT 'Orange', 7 UNION ALL SELECT 'Grapes', 8 UNION ALL SELECT 'Strawberry', 6 UNION ALL SELECT 'Watermelon', 4 UNION ALL SELECT 'Pineapple', 9 UNION ALL SELECT 'Mango', 2 UNION ALL SELECT 'Peach', 5 UNION ALL SELECT 'Kiwi', 7) AS FoodData  {Query}

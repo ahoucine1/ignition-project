@@ -1,0 +1,42 @@
+[
+  {
+    "usr": {
+      "dataType": "DateTime",
+      "documentation": "The time at which the last DBIRTH message was received by MQTT Engine"
+    },
+    "name": "Online DateTime",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Int8",
+      "documentation": "The number of DBIRTH messages since the last time the info metrics were reset via the Device Info/Reset Info tag"
+    },
+    "name": "Birth Count",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Boolean",
+      "documentation": "Whether or not the Device is online. This is determined by whether the last lifecycle message was an DBIRTH or NBIRTH"
+    },
+    "name": "Online",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "DateTime",
+      "documentation": "The time at which the last DDEATH message was received by MQTT Engine"
+    },
+    "name": "Offline DateTime",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Int8",
+      "documentation": "The number of DDEATH messages since the last time the info metrics were reset via the Device Info/Reset Info tag"
+    },
+    "name": "Death Count",
+    "tagType": "AtomicTag"
+  }
+]

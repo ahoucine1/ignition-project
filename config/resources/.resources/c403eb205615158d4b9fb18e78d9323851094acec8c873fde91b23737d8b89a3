@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Akta",
+    "typeId": "[UNS]_types_/AKTA_Chromatography",
+    "parameters": {
+      "area": {
+        "dataType": "String",
+        "value": "Aear2"
+      },
+      "site": {
+        "dataType": "String",
+        "value": "Site1"
+      },
+      "line": {
+        "dataType": "String",
+        "value": "Line1"
+      },
+      "machine": {
+        "dataType": "String",
+        "value": "Machine"
+      },
+      "source": {
+        "dataType": "String",
+        "value": "[MQTT Engine]Edge Nodes/group1/node1/device1/akta_machine"
+      }
+    },
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "Akta1",
+    "typeId": "[UNS]_types_/AKTA_Chromatography",
+    "parameters": {
+      "area": {
+        "dataType": "String",
+        "value": "Aear2"
+      },
+      "site": {
+        "dataType": "String",
+        "value": "Site1"
+      },
+      "line": {
+        "dataType": "String",
+        "value": "Line1"
+      },
+      "machine": {
+        "dataType": "String",
+        "value": "Machine"
+      },
+      "source": {
+        "dataType": "String",
+        "value": "[MQTT Engine]Edge Nodes/group1/node1/device1/akta_machine"
+      }
+    },
+    "tagType": "UdtInstance"
+  }
+]

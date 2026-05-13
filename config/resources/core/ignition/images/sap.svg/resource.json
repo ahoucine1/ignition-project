@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "sap.svg"
+  ],
+  "attributes": {
+    "width": 1000,
+    "format": "SVG",
+    "lastModification": {
+      "actor": "ahoucine",
+      "timestamp": "2026-05-11T14:46:57Z"
+    },
+    "size": 1555,
+    "lastModificationSignature": "b8c9afb6c7cc3fb15fa72511b5f955b9179d034cad8ef04537cfc945083ca3eb",
+    "height": 495
+  }
+}

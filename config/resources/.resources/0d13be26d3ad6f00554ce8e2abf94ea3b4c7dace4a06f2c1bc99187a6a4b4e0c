@@ -1,0 +1,18 @@
+[
+  {
+    "usr": {
+      "readOnly": true,
+      "dataType": "Boolean",
+      "documentation": "Writeable tag to delete all UNS namespace tags associated with this Sparkplug Device. Tag is set to read-only by default"
+    },
+    "name": "Delete UNS Tags",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Boolean"
+    },
+    "name": "Rebirth",
+    "tagType": "AtomicTag"
+  }
+]

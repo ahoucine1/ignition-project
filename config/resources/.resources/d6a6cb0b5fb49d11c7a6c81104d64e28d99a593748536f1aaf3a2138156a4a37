@@ -1,0 +1,201 @@
+{
+  "users": [
+    {
+      "uuid": "f39addc9-73b7-4267-876e-7979160accfb",
+      "username": "admin",
+      "schedule": "Always",
+      "password": "[120377ea]719f282fc1711f2555f3791e21110cb050651505c5eb43d801ec4dc6201e2242",
+      "passwordDate": "20260313.094848861+0100",
+      "passwordHistory": [],
+      "createdDate": "20260313.094848853+0100",
+      "lastModifiedDate": "20260313.094848853+0100",
+      "roles": [
+        "9ea52c65-965b-4faf-ae4d-6990f528ca64"
+      ],
+      "extraProps": [],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    },
+    {
+      "uuid": "20fda66e-5e92-4473-8c25-eaf5167b4e00",
+      "username": "mbensaid",
+      "firstName": "MBENSAID",
+      "lastName": "",
+      "schedule": "Always",
+      "description": "",
+      "password": "[CEDCBA7E]634e53a59ba62a274cecbacbf156eaefa5da0e197531d3b0ff69eec950207d59",
+      "passwordDate": "20260316.095124028+0100",
+      "passwordHistory": [],
+      "badge": "",
+      "createdDate": "20260313.101342547+0100",
+      "lastModifiedDate": "20260316.095124028+0100",
+      "roles": [
+        "9ea52c65-965b-4faf-ae4d-6990f528ca64"
+      ],
+      "extraProps": [
+        {
+          "propertyKey": "user.pin",
+          "propertyValue": ""
+        }
+      ],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    },
+    {
+      "uuid": "edfc524f-fcba-4d79-8f58-4fc98b5e6c09",
+      "username": "cferjani",
+      "firstName": "Chaima Ferjani",
+      "lastName": "",
+      "schedule": "Always",
+      "description": "",
+      "password": "[258E6579]4b141cc4745c16736c9cb0d8a56f6229b6db24eab1164d88134846440fe236ed",
+      "passwordDate": "20260316.095223285+0100",
+      "passwordHistory": [],
+      "badge": "",
+      "createdDate": "20260313.104728741+0100",
+      "lastModifiedDate": "20260316.095223285+0100",
+      "roles": [
+        "9ea52c65-965b-4faf-ae4d-6990f528ca64"
+      ],
+      "extraProps": [
+        {
+          "propertyKey": "user.pin",
+          "propertyValue": ""
+        }
+      ],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    },
+    {
+      "uuid": "1cb258df-b8d8-4505-8b24-34aedfbd7bae",
+      "username": "kbenyahia",
+      "firstName": "Kais",
+      "lastName": "",
+      "schedule": "Always",
+      "description": "",
+      "password": "[6B1A0C3A]3ea6b2485a29ed2ef509fe9cda43617de42419944bc1d114fcf79859f0e57c9f",
+      "passwordDate": "20260316.095251466+0100",
+      "passwordHistory": [],
+      "badge": "",
+      "createdDate": "20260313.104942653+0100",
+      "lastModifiedDate": "20260316.095251466+0100",
+      "roles": [
+        "9ea52c65-965b-4faf-ae4d-6990f528ca64"
+      ],
+      "extraProps": [
+        {
+          "propertyKey": "user.pin",
+          "propertyValue": ""
+        }
+      ],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    },
+    {
+      "uuid": "48134f7c-941d-4ba7-9938-33f7b80f9662",
+      "username": "melhandous",
+      "firstName": "Mohamed El Handous",
+      "lastName": "",
+      "schedule": "Always",
+      "description": "",
+      "password": "[F5803EF2]4e5cee927388b2696d343d3a27eeb4d4831a80b831382b69fe7a754853ef0af3",
+      "passwordDate": "20260316.095318392+0100",
+      "passwordHistory": [],
+      "badge": "",
+      "createdDate": "20260313.105410259+0100",
+      "lastModifiedDate": "20260316.095318392+0100",
+      "roles": [
+        "9ea52c65-965b-4faf-ae4d-6990f528ca64"
+      ],
+      "extraProps": [
+        {
+          "propertyKey": "user.pin",
+          "propertyValue": ""
+        }
+      ],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    },
+    {
+      "uuid": "d2eb41bc-b730-493a-8057-9cf1fd2c2a95",
+      "username": "ysaggay",
+      "firstName": "Youssef Saggay",
+      "lastName": "",
+      "schedule": "Always",
+      "description": "",
+      "password": "[7BD07B5A]4763989b9d959c50fb487315f9ce39b6db4ddd5a593680f2b105e2ed2be1285c",
+      "passwordDate": "20260316.095356317+0100",
+      "passwordHistory": [],
+      "badge": "",
+      "createdDate": "20260313.105735698+0100",
+      "lastModifiedDate": "20260316.095356317+0100",
+      "roles": [
+        "9ea52c65-965b-4faf-ae4d-6990f528ca64"
+      ],
+      "extraProps": [
+        {
+          "propertyKey": "user.pin",
+          "propertyValue": ""
+        }
+      ],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    },
+    {
+      "uuid": "ed8fa73a-6ed4-4ee3-b58f-93c693303d43",
+      "username": "mbouzid",
+      "firstName": "Malek",
+      "lastName": "Bouzid",
+      "schedule": "Always",
+      "description": "",
+      "password": "[A17C5C79]8562d2700093d1d0d13ee577c9d02eefae52948b6d96df58747caf204d205f27",
+      "passwordDate": "20260316.161059223+0100",
+      "passwordHistory": [],
+      "badge": "",
+      "createdDate": "20260316.161059222+0100",
+      "lastModifiedDate": "20260316.161128751+0100",
+      "roles": [
+        "9ea52c65-965b-4faf-ae4d-6990f528ca64"
+      ],
+      "extraProps": [
+        {
+          "propertyKey": "user.pin",
+          "propertyValue": ""
+        }
+      ],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    },
+    {
+      "uuid": "eb5d603b-852e-4ccd-b955-3f6ace34bf06",
+      "username": "gneveu",
+      "firstName": "Guillaume",
+      "lastName": "Neveu",
+      "schedule": "Always",
+      "description": "",
+      "password": "[3B2002C8]346f4d71047cfa350121b716089904d6d7302f94123a010dc87fece6ee8ddcd1",
+      "passwordDate": "20260316.173857779+0100",
+      "passwordHistory": [],
+      "badge": "",
+      "createdDate": "20260316.173857778+0100",
+      "lastModifiedDate": "20260316.173857778+0100",
+      "roles": [],
+      "extraProps": [
+        {
+          "propertyKey": "user.pin",
+          "propertyValue": ""
+        }
+      ],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    }
+  ],
+  "roles": [
+    {
+      "uuid": "9ea52c65-965b-4faf-ae4d-6990f528ca64",
+      "rolename": "Administrator",
+      "createdDate": "20260313.094848853+0100",
+      "lastModifiedDate": "20260316.173905012+0100"
+    }
+  ]
+}

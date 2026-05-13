@@ -1,0 +1,11 @@
+[
+  {
+    "usr": {
+      "readOnly": true,
+      "dataType": "Int8",
+      "enabled": true
+    },
+    "name": "temperature",
+    "tagType": "AtomicTag"
+  }
+]

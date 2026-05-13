@@ -1,0 +1,32 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Int4",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "HOA",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Int4",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "Pattern",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Int4",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "Type",
+    "tagType": "AtomicTag"
+  }
+]

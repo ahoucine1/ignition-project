@@ -1,0 +1,13 @@
+[
+  {
+    "name": "sensor 1",
+    "typeId": "sensor",
+    "parameters": {
+      "sensor num": {
+        "dataType": "Integer",
+        "value": 1
+      }
+    },
+    "tagType": "UdtInstance"
+  }
+]

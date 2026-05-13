@@ -1,0 +1,17 @@
+[
+  {
+    "name": "sensor 1",
+    "typeId": "sensor",
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "sensor 2",
+    "typeId": "sensor",
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "sensor 3",
+    "typeId": "sensor",
+    "tagType": "UdtInstance"
+  }
+]

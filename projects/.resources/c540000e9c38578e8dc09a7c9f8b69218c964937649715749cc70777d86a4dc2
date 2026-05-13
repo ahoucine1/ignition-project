@@ -1,0 +1,184 @@
+{
+  "custom": {
+    "selectedTagPath": "\"select tag path\""
+  },
+  "params": {},
+  "propConfig": {
+    "custom.selectedTagPath": {
+      "access": "PUBLIC",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onSelect": {
+              "config": {
+                "script": "    system.perspective.sendMessage(\"toast\", {\n        \"message\": \"onSelect fired!\",\n        \"severity\": \"info\",\n        \"duration\": 1000\n    })\n    keys \u003d event.source.selectedKeys\n    if keys and len(keys) \u003e 0:\n        self.view.custom.selectedTagPath \u003d keys[0]\n    else:\n        self.view.custom.selectedTagPath \u003d \"\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "TagBrowseTree"
+        },
+        "position": {
+          "height": 491,
+          "width": 330
+        },
+        "props": {
+          "root": {
+            "path": "[MQTT Engine]Edge Nodes"
+          }
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": [
+            {
+              "enabled": true,
+              "name": "filterBrowseNode",
+              "script": "\treturn True"
+            }
+          ],
+          "messageHandlers": []
+        },
+        "type": "ia.display.tag-browse-tree"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tbrowse_root \u003d system.tag.browse(\"[UNS]\")   # change provider name\n\tprint(\"Root browse:\", browse_root)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 34,
+          "width": 126,
+          "x": 361,
+          "y": 34
+        },
+        "props": {
+          "text": "create new machine"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 464,
+          "x": 351,
+          "y": 108
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "../TagBrowseTree.props.selection.values"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 361.33,
+          "y": 619
+        },
+        "props": {
+          "text": "Label"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "contextMenu": {
+            "items": [
+              {
+                "children": [],
+                "icon": {
+                  "color": "",
+                  "path": "",
+                  "style": {}
+                },
+                "link": {
+                  "target": "self",
+                  "url": ""
+                },
+                "message": {
+                  "payload": {},
+                  "scope": "page",
+                  "type": ""
+                },
+                "method": {
+                  "name": "",
+                  "params": {}
+                },
+                "style": {
+                  "classes": ""
+                },
+                "text": "menu-item",
+                "type": "link"
+              }
+            ]
+          },
+          "name": "Dropdown"
+        },
+        "position": {
+          "height": 36,
+          "width": 256,
+          "x": 490.66999999999996,
+          "y": 220.33
+        },
+        "propConfig": {
+          "props.options": {
+            "binding": {
+              "config": {
+                "path": ""
+              },
+              "transforms": [
+                {
+                  "code": "\t# No imports needed – use Ignition\u0027s built‑in dataset functions\n\ttry:\n\t    # Query UDT definitions from your tag provider (change \"Default\" if needed)\n\t    udts \u003d system.tag.queryUDTs(provider\u003d\"UNS\")\n\t    \n\t    # Extract and sort the names\n\t    names \u003d [udt.get(\"name\") for udt in udts]\n\t    names.sort()\n\t    \n\t    # Build a dataset with one column \"udtName\"\n\t    # Convert list of names into a 2D list (each row \u003d [name])\n\t    data \u003d [[name] for name in names]\n\t    \n\t    # Create dataset using system.dataset.toDataSet\n\t    dataset \u003d system.dataset.toDataSet([\"udtName\"], data)\n\t    return dataset\n\t    \n\texcept Exception as e:\n\t    # Return empty dataset on error (so dropdown doesn\u0027t break)\n\t    return system.dataset.toDataSet([\"udtName\"], [])",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "placeholder": {
+            "text": "Select UDT Type"
+          }
+        },
+        "type": "ia.input.dropdown"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

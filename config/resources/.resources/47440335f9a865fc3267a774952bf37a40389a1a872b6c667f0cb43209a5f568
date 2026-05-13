@@ -1,0 +1,70 @@
+[
+  {
+    "name": "sensor 1",
+    "typeId": "sensor",
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": "[MQTT Engine]Edge Nodes/group1/node1/device1/Sensor 1"
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "name": "OEE",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "memory",
+            "dataType": "Float8",
+            "deadbandMode": "Absolute",
+            "name": "Ideal_Cycle_Time",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "memory",
+            "name": "Planned_Production time",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "memory",
+            "name": "Total_count",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}/Run_time"
+            },
+            "valueSource": "memory",
+            "name": "Run_Time",
+            "tagType": "AtomicTag"
+          },
+          {
+            "expression": "{[.]Run_Time}/{[.]Planned_Production time}",
+            "dataType": "Float4",
+            "name": "Availability ",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "ProcessValues",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "historyProvider": "db_historian",
+            "historyEnabled": false,
+            "name": "Temperature",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Capsule filler 1",
+    "typeId": "UDT_CapsuleFiller",
+    "tagType": "UdtInstance"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "pages": {
+    "/": {
+      "title": "",
+      "viewPath": ""
+    },
+    "/browse_mqtt": {
+      "title": "",
+      "viewPath": "browse_mqtt"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom",
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 150,
+        "viewParams": {},
+        "viewPath": "Horizontal-Menu-Nav"
+      }
+    ]
+  }
+}

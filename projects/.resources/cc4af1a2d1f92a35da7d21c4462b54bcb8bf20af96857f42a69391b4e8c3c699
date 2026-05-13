@@ -1,0 +1,69 @@
+{
+  "pages": {
+    "/": {
+      "docks": {
+        "bottom": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 150,
+            "viewParams": {},
+            "viewPath": "WYNSYS_Ignition_POC_WA1/Footer/Footer"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "WYNSYS_Ignition_POC_WA1/Browse_UNS/browse_uns"
+    },
+    "/browse_mqtt": {
+      "title": "",
+      "viewPath": "WYNSYS_Ignition_POC_WA1/Add_Machine/add_machine"
+    },
+    "/uns": {
+      "title": "",
+      "viewPath": "WYNSYS_Ignition_POC_WA1/Browse_UNS/browse_uns"
+    }
+  },
+  "sharedDocks": {
+    "bottom": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 75,
+        "viewParams": {},
+        "viewPath": "WYNSYS_Ignition_POC_WA1/Footer/Footer"
+      }
+    ],
+    "cornerPriority": "left-right",
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 100,
+        "viewParams": {},
+        "viewPath": "WYNSYS_Ignition_POC_WA1/Header/Header"
+      }
+    ]
+  }
+}

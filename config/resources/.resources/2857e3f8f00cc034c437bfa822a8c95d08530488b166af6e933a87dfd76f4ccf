@@ -1,0 +1,24 @@
+[
+  {
+    "name": "sensor",
+    "parameters": {
+      "device name": "",
+      "sensor num": 0
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "dataType": "Float8",
+        "name": "Humidity",
+        "value": null,
+        "tagType": "AtomicTag"
+      },
+      {
+        "dataType": "Float8",
+        "name": "Temperature",
+        "value": null,
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

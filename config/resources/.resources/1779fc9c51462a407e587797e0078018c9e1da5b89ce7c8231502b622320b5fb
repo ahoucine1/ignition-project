@@ -1,0 +1,64 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Float8",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "CaseCount",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "My MQTT Group",
+      "readOnly": false,
+      "dataType": "Int4",
+      "SparkplugDeviceId": "PLC 1",
+      "SparkplugEdgeNodeId": "Edge Node 7a42a6"
+    },
+    "name": "Example Tag",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Int2",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "RunControl",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "My MQTT Group",
+      "readOnly": true,
+      "dataType": "String",
+      "SparkplugDeviceId": "PLC 1",
+      "SparkplugEdgeNodeId": "Edge Node 7a42a6"
+    },
+    "name": "MQTT Quickstart",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Int2",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "CurrentOrder",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Int2",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "CurrentRun",
+    "tagType": "AtomicTag"
+  }
+]

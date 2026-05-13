@@ -1,0 +1,42 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Int2",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "CurrentRun",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Float8",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "CaseCount",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Int2",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "RunControl",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Int2",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "CurrentOrder",
+    "tagType": "AtomicTag"
+  }
+]

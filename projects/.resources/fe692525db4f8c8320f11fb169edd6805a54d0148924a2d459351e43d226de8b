@@ -1,0 +1,13 @@
+def read_csv_lo_pydataset():
+    import csv
+    path = system.file.openFile("csv")
+    file = open(path)
+    csvData = csv.reader(file)
+    data = []
+    for row in csvData:
+		data.append(row)
+    ds = system.dataset.toDataset(headers, data)
+    pds = pd.DataFrame(data)
+    pds.to_csv(ds)
+    file.close()
+    return pds

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "sensor 1",
+    "typeId": "sensor",
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": "[MQTT Engine]Edge Nodes/group1/node1/device1/Sensor 1"
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "name": "ProcessValues",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "historyProvider": "Test_historian",
+            "historyEnabled": false,
+            "name": "Temperature",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Capsule filler 1",
+    "typeId": "UDT_CapsuleFiller",
+    "tagType": "UdtInstance"
+  }
+]

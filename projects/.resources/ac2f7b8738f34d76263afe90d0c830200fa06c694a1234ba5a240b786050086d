@@ -1,0 +1,39 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onContextMenu": {
+              "config": {
+                "script": "\n    \"\"\"\n    Called when user right‑clicks a node in the tree.\n    Returns a list of menu items.\n    \"\"\"\n    # node is the tag path of the clicked node\n    if not node:\n        return []\n    \n    menu_items \u003d [\n        {\n            \"label\": \"Copy Tag Path\",\n            \"action\": lambda: system.perspective.sendClipboard(node),\n            \"icon\": \"copy\"\n        }\n    ]\n    # You can add more items like \"Show Details\", \"Create UDT\", etc.\n    return menu_items"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "TagBrowseTree"
+        },
+        "position": {
+          "height": 400,
+          "width": 235
+        },
+        "props": {
+          "root": {
+            "path": "[MQTT Engine]Edge Nodes"
+          }
+        },
+        "type": "ia.display.tag-browse-tree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

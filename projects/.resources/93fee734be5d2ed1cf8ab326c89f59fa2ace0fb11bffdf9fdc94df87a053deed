@@ -1,0 +1,305 @@
+{
+  "custom": {
+    "selectedTagPath": "\"select tag path\""
+  },
+  "params": {},
+  "propConfig": {
+    "custom.selectedTagPath": {
+      "access": "PUBLIC",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onSelect": {
+              "config": {
+                "script": "    system.perspective.sendMessage(\"toast\", {\n        \"message\": \"onSelect fired!\",\n        \"severity\": \"info\",\n        \"duration\": 1000\n    })\n    keys \u003d event.source.selectedKeys\n    if keys and len(keys) \u003e 0:\n        self.view.custom.selectedTagPath \u003d keys[0]\n    else:\n        self.view.custom.selectedTagPath \u003d \"\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "TagBrowseTree"
+        },
+        "position": {
+          "height": 491,
+          "width": 330
+        },
+        "props": {
+          "root": {
+            "path": "[MQTT Engine]Edge Nodes"
+          }
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": [
+            {
+              "enabled": true,
+              "name": "filterBrowseNode",
+              "script": "\treturn True"
+            }
+          ],
+          "messageHandlers": []
+        },
+        "type": "ia.display.tag-browse-tree"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t# Get values from the view\n\tmachine_type \u003d self.getSibling(\"Dropdown\").props.value\n\tsite \u003d self.getSibling(\"site\").props.text\n\tarea \u003d self.getSibling(\"area\").props.text\n\tline \u003d self.getSibling(\"line\").props.text\n\tmachine \u003d self.getSibling(\"machine\").props.text\n\tinstance_name \u003d self.getSibling(\"instance_name\").props.text\n\t\n\t# Get source tag path from Tag Browse Tree\n\tsource_tag_path \u003d self.getSibling(\"TagBrowseTree\").props.selection.values\n\t\n\t# Validate\n\tif not all([machine_type, site, area, line, instance_name, source_tag_path]):\n\t    system.perspective.print(\"Please fill in all fields and select a source tag.\")\n\t    return\n\t\n\tuns_provider \u003d \"UNS\"\n\t\n\t# Build path\n\tfull_path \u003d \"[{}]/Pharma/{}/{}/{}/{}\".format(\n\t    uns_provider,\n\t    site,\n\t    area,\n\t    line,\n\t    machine\n\t)\n\t\n\t# UDT type path\n\tudt_type_path \u003d machine_type\n\t\n\ttry:\n\t\n\t    # Create UDT instance\n\t    system.tag.configure(full_path, [{\n\t        \"name\": instance_name,\n\t        \"tagType\": \"UdtInstance\",\n\t        \"typeId\": udt_type_path\n\t    }])\n\t\n\t    # Parameters\n\t    params \u003d {\n\t        \"site\": site,\n\t        \"area\": area,\n\t        \"line\": line,\n\t        \"machine\": machine,\n\t        \"source\": source_tag_path\n\t    }\n\t\n\t    for param_name, param_value in params.items():\n\t        param_tag_path \u003d \"{}/{}\".format(full_path, param_name)\n\t        system.tag.writeBlocking([param_tag_path], [param_value])\n\t\n\t    system.perspective.print(\n\t        \"Machine \u0027{}\u0027 created successfully at {}\".format(\n\t            instance_name,\n\t            full_path\n\t        )\n\t    )\n\t\n\texcept Exception as e:\n\t    system.perspective.print(\n\t        \"Error creating machine: {}\".format(str(e))\n\t    )"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 34,
+          "width": 126,
+          "x": 124,
+          "y": 504
+        },
+        "props": {
+          "text": "create new machine"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 464,
+          "x": 367,
+          "y": 503
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "../TagBrowseTree.props.selection.values"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "height": 36,
+          "width": 256,
+          "x": 385,
+          "y": 463
+        },
+        "props": {
+          "options": [
+            {
+              "label": "AKTA Model",
+              "value": "[UNS]_types_/AKTA_Chromatography"
+            },
+            {
+              "label": "Sensor udt",
+              "value": "[UNS]_types_/sensor"
+            }
+          ],
+          "placeholder": {
+            "text": "Select Machine Type"
+          }
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 411.33,
+          "y": 39
+        },
+        "props": {
+          "text": "Site:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 409.33,
+          "y": 122
+        },
+        "props": {
+          "text": "Area:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 408.33,
+          "y": 203
+        },
+        "props": {
+          "text": "Line:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 32,
+          "width": 81,
+          "x": 408.33,
+          "y": 281
+        },
+        "props": {
+          "text": "Machine:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_4"
+        },
+        "position": {
+          "height": 32,
+          "width": 140,
+          "x": 408.33,
+          "y": 354.33
+        },
+        "props": {
+          "text": "Instance Name:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "site"
+        },
+        "position": {
+          "height": 32,
+          "width": 235,
+          "x": 389.334,
+          "y": 79.6529
+        },
+        "props": {
+          "placeholder": "enter site"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "area"
+        },
+        "position": {
+          "height": 32,
+          "width": 235,
+          "x": 390.6666793823242,
+          "y": 157.32999999999998
+        },
+        "props": {
+          "placeholder": "enter area"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "line"
+        },
+        "position": {
+          "height": 32,
+          "width": 235,
+          "x": 390.6666793823242,
+          "y": 235.32999999999998
+        },
+        "props": {
+          "placeholder": "enter line"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "machine"
+        },
+        "position": {
+          "height": 32,
+          "width": 235,
+          "x": 390.6666793823242,
+          "y": 318.33
+        },
+        "props": {
+          "placeholder": "enter machine"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "instance_name"
+        },
+        "position": {
+          "height": 32,
+          "width": 235,
+          "x": 390.6666793823242,
+          "y": 391.33
+        },
+        "props": {
+          "placeholder": "enter instance name"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "Label_5"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 372,
+          "y": 565
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "../site.props.text"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

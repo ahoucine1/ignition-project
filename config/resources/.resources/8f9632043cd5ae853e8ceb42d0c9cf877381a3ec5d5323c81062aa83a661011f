@@ -1,0 +1,29 @@
+[
+  {
+    "name": "uh",
+    "typeId": "[UNS]_types_/sensor",
+    "parameters": {
+      "area": {
+        "dataType": "String",
+        "value": "ada"
+      },
+      "site": {
+        "dataType": "String",
+        "value": "azd"
+      },
+      "line": {
+        "dataType": "String",
+        "value": "daz"
+      },
+      "machine": {
+        "dataType": "String",
+        "value": "adz"
+      },
+      "source": {
+        "dataType": "String",
+        "value": "\u003cArrayWrapper\u003e: [u\u0027[MQTT Engine]Edge Nodes/group1\u0027]"
+      }
+    },
+    "tagType": "UdtInstance"
+  }
+]

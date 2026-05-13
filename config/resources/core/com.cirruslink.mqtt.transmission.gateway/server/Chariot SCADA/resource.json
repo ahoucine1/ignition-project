@@ -1,0 +1,19 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "config.json",
+    "backupConfig.json"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "ahoucine",
+      "timestamp": "2026-04-23T08:52:55Z"
+    },
+    "uuid": "26820ce2-cd52-4f1b-b2e8-aa6458becf75",
+    "lastModificationSignature": "afa61f9c027c35c5052914ad504a2367f05d470793992f26dc8d61aa8bacb974",
+    "enabled": true
+  }
+}

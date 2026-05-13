@@ -1,0 +1,119 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 48,
+      "width": 797
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Small"
+        },
+        "props": {
+          "justify": "space-between"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "33%",
+              "grow": 1
+            },
+            "props": {
+              "alignItems": "flex-start",
+              "aspectRatio": 2,
+              "direction": "column",
+              "justify": "center",
+              "mode": "fixed"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Image"
+                },
+                "position": {
+                  "basis": "100px"
+                },
+                "props": {
+                  "fit": {
+                    "mode": "contain"
+                  },
+                  "source": "/system/images/Logo_WYNSYS_vectoriel.svg"
+                },
+                "type": "ia.display.image"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "414px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "33%",
+              "grow": 1
+            },
+            "props": {
+              "alignItems": "flex-end",
+              "direction": "row-reverse",
+              "justify": "flex-end",
+              "style": {
+                "marginLeft": "5%",
+                "marginRight": "0%",
+                "paddingLeft": "5%",
+                "paddingRight": "2%"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Large"
+        },
+        "position": {
+          "size": "large"
+        },
+        "props": {
+          "alignContent": "center",
+          "alignItems": "center",
+          "style": {
+            "backgroundColor": "#000000",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "breakpoint": 800,
+      "style": {
+        "classes": "exchange/launchpad/kpi/header/root"
+      }
+    },
+    "type": "ia.container.breakpt"
+  }
+}

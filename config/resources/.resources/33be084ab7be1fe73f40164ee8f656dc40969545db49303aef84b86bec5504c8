@@ -1,0 +1,35 @@
+[
+  {
+    "name": "sensor",
+    "typeId": null,
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/Humidity"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "Humidity",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{source}/Temperature"
+        },
+        "valueSource": "reference",
+        "dataType": "Float4",
+        "name": "Temperature",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

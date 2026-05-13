@@ -1,0 +1,50 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onNodeDoubleClick": {
+              "config": {
+                "script": "\n    # Get the tag path from the event\n    tagPath \u003d event.node\n    \n    if tagPath:\n        # Copy to clipboard\n        system.perspective.sendClipboard(tagPath)\n        \n        # Show confirmation toast\n        system.perspective.sendMessage(\"toast\", {\n            \"message\": \"Copied: {tagPath}\",\n            \"severity\": \"info\",\n            \"duration\": 2000\n        })"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "TagBrowseTree"
+        },
+        "position": {
+          "height": 491,
+          "width": 330
+        },
+        "props": {
+          "root": {
+            "path": "[MQTT Engine]Edge Nodes"
+          }
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": [
+            {
+              "enabled": true,
+              "name": "filterBrowseNode",
+              "script": "return True"
+            }
+          ],
+          "messageHandlers": []
+        },
+        "type": "ia.display.tag-browse-tree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

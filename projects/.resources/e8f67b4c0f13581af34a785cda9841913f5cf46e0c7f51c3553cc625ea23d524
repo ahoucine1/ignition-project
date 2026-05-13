@@ -1,0 +1,45 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TagBrowseTree"
+        },
+        "position": {
+          "height": 475,
+          "width": 353,
+          "x": 10,
+          "y": 46
+        },
+        "props": {
+          "root": {
+            "path": "[UNS]"
+          }
+        },
+        "type": "ia.display.tag-browse-tree"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 249,
+          "x": 10,
+          "y": 8
+        },
+        "props": {
+          "text": "UNS View"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

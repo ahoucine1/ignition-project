@@ -1,0 +1,12 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Int2",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "Fan 2 HOA",
+    "tagType": "AtomicTag"
+  }
+]

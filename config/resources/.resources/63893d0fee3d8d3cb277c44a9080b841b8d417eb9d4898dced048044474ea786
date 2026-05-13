@@ -1,0 +1,23 @@
+{
+  "birthSettleDelay": 0,
+  "convertUdts": true,
+  "dataQos": 0,
+  "dataRetain": true,
+  "deviceLevelUdtsAsDevices": false,
+  "discoveryDelay": 0,
+  "enableStoreForwardByDefault": true,
+  "filteredProperties": "*",
+  "inOrderHistory": true,
+  "includeSparkplugDataTypes": true,
+  "optimizeUdts": true,
+  "propsQos": 1,
+  "propsRetain": true,
+  "publishUdtDefinitions": true,
+  "sendAllProps": true,
+  "serverSet": "Default",
+  "tagPacingPeriod": 100,
+  "tagPath": "[UNS]",
+  "tagProvider": "UNS",
+  "transmitterMqttClientCount": 1,
+  "useTopicPrefixToken": true
+}

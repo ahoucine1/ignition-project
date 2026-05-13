@@ -1,0 +1,12 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "dataType": "Int4",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "Mode",
+    "tagType": "AtomicTag"
+  }
+]

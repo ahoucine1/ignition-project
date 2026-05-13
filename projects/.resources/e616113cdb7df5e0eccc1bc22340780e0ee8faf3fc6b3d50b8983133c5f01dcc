@@ -1,0 +1,64 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 669,
+      "width": 531
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "TagBrowseTree"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "root": {
+                "path": "[UNS]"
+              }
+            },
+            "type": "ia.display.tag-browse-tree"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "props": {
+              "text": "UNS View"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "height": "90%",
+          "width": "90%",
+          "x": -7,
+          "y": 9
+        },
+        "props": {
+          "direction": "column-reverse",
+          "style": {
+            "marginLeft": "3%"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "width": "100%"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

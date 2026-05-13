@@ -1,0 +1,20 @@
+[
+  {
+    "usr": {
+      "readOnly": true,
+      "dataType": "DateTime",
+      "writePermissions": {
+        "type": "AllOf",
+        "securityLevels": []
+      },
+      "documentation": "The time at which the last Edge Node refresh request was completed",
+      "readPermissions": {
+        "type": "AllOf",
+        "securityLevels": []
+      },
+      "enabled": true
+    },
+    "name": "Last Refresh",
+    "tagType": "AtomicTag"
+  }
+]

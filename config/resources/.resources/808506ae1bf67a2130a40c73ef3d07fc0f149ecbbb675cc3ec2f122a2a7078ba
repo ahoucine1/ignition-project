@@ -1,0 +1,24 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "readOnly": true,
+      "dataType": "String",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "MQTT Quickstart",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group1",
+      "readOnly": false,
+      "dataType": "Int4",
+      "SparkplugDeviceId": "device1",
+      "SparkplugEdgeNodeId": "node1"
+    },
+    "name": "Example Tag",
+    "tagType": "AtomicTag"
+  }
+]

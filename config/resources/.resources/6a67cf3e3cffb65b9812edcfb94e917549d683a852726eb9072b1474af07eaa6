@@ -1,0 +1,19 @@
+[
+  {
+    "valueSource": "memory",
+    "name": "Mode",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "name": "High alarm",
+    "defaultValue": 1,
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "name": "Mode 2",
+    "defaultValue": 1,
+    "tagType": "AtomicTag"
+  }
+]
