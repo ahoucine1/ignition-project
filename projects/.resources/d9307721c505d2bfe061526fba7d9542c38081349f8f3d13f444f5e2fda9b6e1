@@ -1,0 +1,26 @@
+def handleScheduleEvent():
+	def count_tags(folder_path):
+	    total = 0
+	    try:
+	        children = system.tag.browse(folder_path)
+	        for child in children:
+	            tag_type = child.get('tagType')
+	            tag_type_str = str(tag_type) if tag_type else ""
+	            # Recurse if it's a container (Folder, UDT, etc.)
+	            if tag_type_str in ('Folder', 'UDT', 'UdtInstance', 'UDT Instance'):
+	                total += count_tags(child['fullPath'])
+	            else:
+	                # Leaf tag (Tag, OPCItem, etc.)
+	                total += 1
+	    except Exception as e:
+	        print "Error browsing " + folder_path + ": " + str(e)
+	    return total
+	
+	# Start from the root
+	root = "[UNS]Pharma"
+	total_tags = count_tags(root)
+
+
+# Write to a memory tag (create [UNS]TotalTagCount first)
+# system.tag.writeBlocking("[UNS]TotalTagCount", total_tags)	
+	system.tag.writeBlocking("[UNS]TotalTags", total_tags)

@@ -3,14 +3,14 @@
     "usr": {
       "dataType": "Float8"
     },
-    "name": "Humidity",
+    "name": "Temperature",
     "tagType": "AtomicTag"
   },
   {
     "usr": {
       "dataType": "Float8"
     },
-    "name": "Temperature",
+    "name": "Humidity",
     "tagType": "AtomicTag"
   }
 ]

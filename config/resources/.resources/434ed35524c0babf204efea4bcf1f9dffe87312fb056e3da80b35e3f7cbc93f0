@@ -1,0 +1,15 @@
+[
+  {
+    "valueSource": "memory",
+    "dataType": "DataSet",
+    "name": "SiteList",
+    "defaultValue": "{\"columns\":[{\"name\":\"site\",\"type\":\"java.lang.String\"},{\"name\":\"site_\",\"type\":\"java.lang.String\"}],\"rows\":[[\"Site 1\",\"Site 1\"],[\"Site 2\",\"Site 2\"]]}",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "expr",
+    "dataType": "StringArray",
+    "name": "New Tag",
+    "tagType": "AtomicTag"
+  }
+]

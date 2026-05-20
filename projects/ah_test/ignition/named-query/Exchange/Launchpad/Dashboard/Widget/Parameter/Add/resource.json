@@ -1,0 +1,50 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "UpdateQuery",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "4c77a3aad7348f2b508d28f0cc53d020d1579a3acfe89f91e99efc669af82301",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "ahoucine",
+      "timestamp": "2026-05-13T16:55:06Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "parameter_id",
+        "sqlType": 2
+      },
+      {
+        "type": "Parameter",
+        "identifier": "parameter_value",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "widget_id",
+        "sqlType": 2
+      }
+    ]
+  }
+}

@@ -3,14 +3,14 @@
     "usr": {
       "dataType": "Int4"
     },
-    "name": "HOA",
+    "name": "Pattern",
     "tagType": "AtomicTag"
   },
   {
     "usr": {
       "dataType": "Int4"
     },
-    "name": "Pattern",
+    "name": "HOA",
     "tagType": "AtomicTag"
   },
   {

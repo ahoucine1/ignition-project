@@ -1,0 +1,17 @@
+[
+  {
+    "valueSource": "memory",
+    "valuePersistence": "None",
+    "dataType": "StringArray",
+    "name": "Site_List",
+    "defaultValue": "{\"columns\":[{\"name\":\"Sites\",\"type\":\"java.lang.String\"},{\"name\":\"Lines\",\"type\":\"java.lang.String\"},{\"name\":\"Areas\",\"type\":\"java.lang.String\"}],\"rows\":[[\"Site 1\",\"Line 1\",\"Area 1\"],[\"Site 2\",\"Line 2\",\"Area 2\"]]}",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "expr",
+    "dataType": "StringArray",
+    "name": "New Tag",
+    "tagType": "AtomicTag"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "valueSource": "memory",
+    "dataType": "Int1Array",
+    "name": "Site_List 1",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "Int1Array",
+    "name": "Site_List",
+    "tagType": "AtomicTag"
+  }
+]

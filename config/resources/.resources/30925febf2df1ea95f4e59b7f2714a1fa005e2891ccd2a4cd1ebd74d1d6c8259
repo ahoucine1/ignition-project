@@ -1,0 +1,24 @@
+[
+  {
+    "valueSource": "opc",
+    "name": "New Tag 1",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "opc",
+    "name": "New Tag",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "opc",
+    "dataType": "StringArray",
+    "name": "Site_List",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "name": "New Tag 2",
+    "tagType": "AtomicTag"
+  }
+]

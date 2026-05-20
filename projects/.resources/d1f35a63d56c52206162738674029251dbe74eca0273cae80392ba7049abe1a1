@@ -1,0 +1,1079 @@
+{
+  "custom": {
+    "documentation": null,
+    "format": null,
+    "history": [
+      {
+        "Placeholder": null,
+        "t_stamp": 1778678733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778679333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778679933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778680533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778681133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778681733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778682333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778682933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778683533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778684133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778684733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778685333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778685933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778686533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778687133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778687733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778688333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778688933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778689533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778690133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778690733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778691333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778691933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778692533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778693133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778693733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778694333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778694933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778695533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778696133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778696733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778697333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778697933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778698533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778699133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778699733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778700333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778700933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778701533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778702133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778702733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778703333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778703933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778704533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778705133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778705733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778706333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778706933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778707533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778708133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778708733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778709333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778709933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778710533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778711133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778711733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778712333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778712933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778713533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778714133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778714733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778715333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778715933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778716533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778717133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778717733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778718333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778718933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778719533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778720133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778720733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778721333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778721933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778722533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778723133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778723733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778724333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778724933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778725533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778726133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778726733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778727333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778727933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778728533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778729133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778729733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778730333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778730933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778731533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778732133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778732733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778733333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778733933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778734533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778735133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778735733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778736333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778736933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778737533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778738133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778738733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778739333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778739933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778740533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778741133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778741733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778742333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778742933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778743533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778744133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778744733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778745333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778745933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778746533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778747133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778747733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778748333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778748933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778749533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778750133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778750733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778751333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778751933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778752533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778753133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778753733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778754333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778754933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778755533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778756133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778756733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778757333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778757933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778758533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778759133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778759733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778760333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778760933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778761533000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778762133000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778762733000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778763333000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778763933000
+      },
+      {
+        "Placeholder": null,
+        "t_stamp": 1778764533000
+      }
+    ],
+    "realtimePath": "[default]Exchange/Launchpad/Placeholder",
+    "sparklinePoints": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "tagName": null,
+    "tags": [
+      {
+        "aggregate": "Average",
+        "alias": "Placeholder",
+        "path": "[default]Exchange/Launchpad/Placeholder"
+      }
+    ]
+  },
+  "params": {
+    "aggMode": "Average",
+    "path": "[default]Exchange/Launchpad/Placeholder"
+  },
+  "propConfig": {
+    "custom.documentation": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "realtimePath": "{view.custom.realtimePath}"
+          },
+          "tagPath": "{realtimePath}.Documentation"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.format": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "realtimePath": "{view.custom.realtimePath}"
+          },
+          "tagPath": "{realtimePath}.FormatString"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.history": {
+      "binding": {
+        "config": {
+          "aggregate": "MinMax",
+          "avoidScanClassValidation": true,
+          "dateRange": {
+            "mostRecent": "24",
+            "mostRecentUnits": "HOUR"
+          },
+          "enableValueCache": true,
+          "ignoreBadQuality": false,
+          "polling": {
+            "enabled": true,
+            "rate": "30"
+          },
+          "preventInterpolation": false,
+          "returnFormat": "Wide",
+          "returnSize": {
+            "delay": "10",
+            "delayUnits": "MIN",
+            "type": "INTERVAL"
+          },
+          "tags": "{view.custom.tags}",
+          "valueFormat": "DOCUMENT"
+        },
+        "type": "tag-history"
+      },
+      "persistent": true
+    },
+    "custom.realtimePath": {
+      "binding": {
+        "config": {
+          "path": "view.params.path"
+        },
+        "transforms": [
+          {
+            "code": "\tdef getRealtimePath(historicalPath):\n\t\ttagDelim \u003d \":/tag:\"\n\t\t\n\t\tparts \u003d historicalPath.rsplit(tagDelim, 1)\n\t\t\n\t\textractedPath \u003d \"\"\n\t\t\n\t\tif len(parts) \u003e 1:\n\t\t\textractedPath \u003d parts[1]\n\t\telse:\n\t\t\textractedPath \u003d historicalPath\n\t\n\t\t# Default fallback.\n\t\tprovName \u003d \"default\"\n\t\t\n\t\tif tagDelim in historicalPath:\n\t\t\tsegBeforeTagDelim \u003d historicalPath.split(tagDelim, 1)[0]\n\t\t\tlastColonIndex \u003d segBeforeTagDelim.rfind(\":\")\n\t\t\t\n\t\t\tif lastColonIndex !\u003d -1:\n\t\t\t\tprovName \u003d segBeforeTagDelim[lastColonIndex + 1:]\n\t\t\telse:\n\t\t\t\tprovName \u003d segBeforeTagDelim.rsplit(\":\", 1)[-1]\n\t\t\t\t\n\t\t\t\tif provName.startswith(\"histprov\"):\n\t\t\t\t\tprovName \u003d provName.split(\":\", 1)[-1]\n\t\t\t\tif not provName:\n\t\t\t\t\tprovName \u003d \"default\"\n\t\t\t\t\t\n\t\treturn \"[{}]{}\".format(provName, extractedPath)\n\t\n\treturn getRealtimePath(value) if \":/tag:\" in value else value",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.sparklinePoints": {
+      "binding": {
+        "config": {
+          "struct": {
+            "history": "{view.custom.history}",
+            "tag": "{view.custom.tags}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tdata \u003d []\n\ttagName \u003d value.get(\u0027tag\u0027)[0].get(\u0027alias\u0027)\n\t\n\tfor row in value.get(\u0027history\u0027):\n\t\tdata.append(row.get(tagName))\n\t\n\treturn data",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.tagName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "realtimePath": "{view.custom.realtimePath}"
+          },
+          "tagPath": "{realtimePath}.name"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.tags": {
+      "binding": {
+        "config": {
+          "struct": {
+            "aggMode": "{view.params.aggMode}",
+            "path": "{view.params.path}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tdef getTagName(tagPath):\n\t\t# Get name from Documentation of tag.\n\t\ttagName \u003d system.tag.read(\u0027{tagPath}.Documentation\u0027.format(tagPath \u003d tagPath)).value\n\t\t\n\t\tif not tagName:\n\t\t\t# No name found in Documentation. Use tag name instead.\n\t\t\tsplitByProv \u003d tagPath.split(\u0027]\u0027)\n\t\t\tpathNoProv \u003d splitByProv[len(splitByProv) - 1]\n\t\n\t\t\t# Now, get the tag name.\n\t\t\tsplitByForwardSlash \u003d pathNoProv.split(\u0027/\u0027)\n\t\t\ttagName \u003d splitByForwardSlash[len(splitByForwardSlash) - 1]\n\t\t\t\n\t\t# Get the eng units of tag.\n\t\tengUnit \u003d system.tag.read(\u0027{tagPath}.engUnit\u0027.format(tagPath \u003d tagPath)).value\n\t\t\n\t\tif engUnit:\n\t\t\treturn \u0027{tagName} ({engUnit})\u0027.format(tagName \u003d tagName, engUnit \u003d engUnit)\n\t\telse:\n\t\t\treturn tagName\n\t\t\t\n\tdef getRealtimePath(historicalPath):\n\t\ttag \u003d \":/tag:\"\n\t\n\t\tparts \u003d historicalPath.rsplit(tag, 1)\n\t\n\t\tif len(parts) \u003e 1:\n\t\t    result \u003d parts[1]\n\t\telse:\n\t\t    result \u003d historicalPath\n\t\t\n\t\treturn result\t\n\t\n\ttagPath \u003d value[\"path\"]\n\t\n\tif tagPath:\n\t\trealtimePath \u003d getRealtimePath(tagPath)\n\t\t\n\t\treturn [{\"path\": tagPath, \"alias\": getTagName(realtimePath), \"aggregate\": value[\"aggMode\"]}]\n\telse:\n\t\treturn []",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.aggMode": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 126,
+      "width": 339
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "documentation": "{view.custom.documentation}",
+                  "tagName": "{view.custom.tagName}"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tif value[\u0027documentation\u0027]:\n\t\treturn value[\u0027documentation\u0027]\n\telse:\n\t\treturn value[\u0027tagName\u0027]",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "exchange/launchpad/kpi/text/label",
+            "textAlign": "left"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "CurrentValue"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "numberFormat(tag({view.custom.realtimePath}),{view.custom.format})"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "exchange/launchpad/kpi/text/number"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Units"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "realtimePath": "{view.custom.realtimePath}"
+                    },
+                    "tagPath": "{realtimePath}.engUnit"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "exchange/launchpad/kpi/text/units"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "ValueAndUnits"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "column-gap": "10px",
+            "row-gap": "0px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Sparkline"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "custom.range": {
+            "binding": {
+              "config": {
+                "path": "view.custom.sparklinePoints"
+              },
+              "transforms": [
+                {
+                  "code": "\tminVal \u003d min(value)\n\tmaxVal \u003d max(value)\n\t\n\tif minVal !\u003d None and maxVal !\u003d None:\n\t\tif minVal !\u003d maxVal:\n\t\t\treturn {\u0027low\u0027: minVal, \u0027high\u0027: maxVal}\n\t\telse:\n\t\t\treturn {\u0027low\u0027: minVal * 0.50, \u0027high\u0027: maxVal * 1.50}\n\telse:\n\t\treturn {\u0027low\u0027: \u0027\u0027, \u0027high\u0027: \u0027\u0027}",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.points": {
+            "binding": {
+              "config": {
+                "path": "view.custom.sparklinePoints"
+              },
+              "type": "property"
+            }
+          },
+          "props.range": {
+            "binding": {
+              "config": {
+                "path": "this.custom.range"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "color": "var(--kpi-primary)",
+          "marker": {
+            "first": {
+              "size": 0
+            },
+            "high": {
+              "size": 0
+            },
+            "last": {
+              "size": 0
+            },
+            "low": {
+              "size": 0
+            }
+          },
+          "style": {
+            "marginTop": "6px"
+          },
+          "width": 2
+        },
+        "type": "ia.display.sparkline"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\tviewPath \u003d \u0027Exchange/Launchpad/Kpi/EmbeddedViews/Popup\u0027\n\tviewParams \u003d {\u0027path\u0027: self.view.custom.realtimePath, \u0027historyProvider\u0027: self.session.custom.exchange.historyProvider}\n\tpopupTitle \u003d \u0027Historical Data\u0027\n\texchange.launchpad.util.popup(self, viewPath, viewParams, popupTitle)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "exchange/launchpad/kpi/card-small",
+        "cursor": "pointer",
+        "gap": "0px",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

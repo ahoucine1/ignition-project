@@ -1,0 +1,30 @@
+[
+  {
+    "valueSource": "memory",
+    "dataType": "DataSet",
+    "name": "LineList",
+    "defaultValue": "{\"columns\":[{\"name\":\"Line\",\"type\":\"java.lang.String\"},{\"name\":\"Line_\",\"type\":\"java.lang.String\"}],\"rows\":[[\"Line 1\",\"Line 1\"],[\"Line 2\",\"Line 2\"]]}",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "DataSet",
+    "name": "AreaList",
+    "defaultValue": "{\"columns\":[{\"name\":\"Area\",\"type\":\"java.lang.String\"},{\"name\":\"Area_\",\"type\":\"java.lang.String\"}],\"rows\":[[\"Area 1\",\"Area 1\"],[\"Area 2\",\"Area 2\"]]}",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "DataSet",
+    "name": "SiteList",
+    "defaultValue": "{\"columns\":[{\"name\":\"site\",\"type\":\"java.lang.String\"},{\"name\":\"site_\",\"type\":\"java.lang.String\"}],\"rows\":[[\"Site 1\",\"Site 1\"],[\"Site 2\",\"Site 2\"]]}",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "DataSet",
+    "name": "SiteList 1",
+    "defaultValue": "{\"columns\":[{\"name\":\"site\",\"type\":\"java.lang.String\"},{\"name\":\"site_\",\"type\":\"java.lang.String\"}],\"rows\":[[\"Site 1\",\"Site 1\"],[\"Site 2\",\"Site 2\"]]}",
+    "tagType": "AtomicTag"
+  }
+]

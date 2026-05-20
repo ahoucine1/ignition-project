@@ -1,16 +1,16 @@
 [
   {
     "usr": {
-      "dataType": "Int2"
+      "dataType": "Float8"
     },
-    "name": "HOA",
+    "name": "Amps",
     "tagType": "AtomicTag"
   },
   {
     "usr": {
-      "dataType": "Float8"
+      "dataType": "Int2"
     },
-    "name": "Amps",
+    "name": "HOA",
     "tagType": "AtomicTag"
   }
 ]

@@ -1,18 +1,18 @@
 [
   {
     "usr": {
+      "dataType": "Float8"
+    },
+    "name": "Humidity",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
       "unit": "C",
       "dataType": "Float8",
       "documentation": "{\"unit\" : \"C\"}"
     },
     "name": "Temperature",
-    "tagType": "AtomicTag"
-  },
-  {
-    "usr": {
-      "dataType": "Float8"
-    },
-    "name": "Humidity",
     "tagType": "AtomicTag"
   }
 ]

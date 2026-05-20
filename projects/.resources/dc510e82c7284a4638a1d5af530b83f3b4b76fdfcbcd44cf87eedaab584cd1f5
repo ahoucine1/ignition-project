@@ -1,0 +1,664 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label_2"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FFFFFF"
+                      },
+                      "text": "Total Devices"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_1"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[MQTT Engine]Engine Info/Devices/DeviceCount"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FFFFFF"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "borderColor": "#000000",
+                    "borderStyle": "solid",
+                    "marginLeft": "4%",
+                    "marginRight": "50%"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label_2"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FF0000"
+                      },
+                      "text": "Offline Devices"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_1"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[MQTT Engine]Engine Info/Devices/DevicesOffline"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FF0000"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "borderColor": "#000000",
+                    "borderStyle": "solid",
+                    "marginRight": "50%"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label_2"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#00D900"
+                      },
+                      "text": "Connected Devices"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_1"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "expression": "{[MQTT Engine]Engine Info/Devices/DeviceCount.value} - {[MQTT Engine]Engine Info/Devices/DevicesOffline.value}"
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#00D900"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "borderColor": "#000000",
+                    "borderStyle": "solid",
+                    "marginRight": "50%"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "48px"
+        },
+        "props": {
+          "style": {
+            "marginLeft": "2%"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FFFFFF"
+                      },
+                      "text": "Total Tags"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_0"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[UNS]TotalTags.value"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FFFFFF"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "borderColor": "#000000",
+                    "borderStyle": "solid",
+                    "marginLeft": "4%",
+                    "marginRight": "60%"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FF0000"
+                      },
+                      "text": "Not Recieved Tags"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_0"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[UNS]NotComingTags.value"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FF0000"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "borderColor": "#000000",
+                    "borderStyle": "solid",
+                    "marginRight": "50%"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#00D900"
+                      },
+                      "text": "Recieved Tags"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_0"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "expression": "{[UNS]TotalTags.value} - {[UNS]NotComingTags.value}"
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#00D900"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "borderColor": "#000000",
+                    "borderStyle": "solid",
+                    "marginRight": "50%"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "48px"
+        },
+        "props": {
+          "style": {
+            "marginBottom": "1%",
+            "marginLeft": "2%",
+            "marginTop": "1%"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Dropdown"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.options": {
+                        "binding": {
+                          "config": {
+                            "path": "parent.props.alignItems"
+                          },
+                          "transforms": [
+                            {
+                              "code": "    results \u003d system.tag.browse(\"[UNS]Pharma\")\n    folder_list \u003d []\n    for node in results.getResults():\n        if str(node[\"tagType\"]) \u003d\u003d \"Folder\":\n            name \u003d node[\"name\"]\n            folder_list.append({\"label\": name, \"value\": name})\n    return folder_list",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "type": "ia.input.dropdown"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown_0"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.options": {
+                        "binding": {
+                          "config": {
+                            "expression": "{../Dropdown.props.value}"
+                          },
+                          "transforms": [
+                            {
+                              "code": "    selected \u003d value\n    \n    if not selected:\n        return []   # No selection → empty dropdown\n    \n    # Build the tag path: [UNS]Pharma/SelectedFolder\n    path \u003d \"[UNS]Pharma/{}\".format(selected)\n    \n    try:\n        results \u003d system.tag.browse(path)\n        folder_list \u003d []\n        for node in results.getResults():\n            if str(node[\"tagType\"]) \u003d\u003d \"Folder\":\n                name \u003d node[\"name\"]\n                folder_list.append({\"label\": name, \"value\": name})\n        return folder_list\n    except Exception as e:\n        print \"Error browsing {}: {}\".format(path, e)\n        return []",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "type": "ia.input.dropdown"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown_1"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.options": {
+                        "binding": {
+                          "config": {
+                            "expression": "concat({../Dropdown.props.value}, \"/\", {../Dropdown_0.props.value})"
+                          },
+                          "transforms": [
+                            {
+                              "code": "    selected \u003d value\n    \n    if not selected:\n        return []   # No selection → empty dropdown\n    \n    # Build the tag path: [UNS]Pharma/SelectedFolder\n    path \u003d \"[UNS]Pharma/{}\".format(selected)\n    \n    try:\n        results \u003d system.tag.browse(path)\n        folder_list \u003d []\n        for node in results.getResults():\n            if str(node[\"tagType\"]) \u003d\u003d \"Folder\":\n                name \u003d node[\"name\"]\n                folder_list.append({\"label\": name, \"value\": name})\n        return folder_list\n    except Exception as e:\n        print \"Error browsing {}: {}\".format(path, e)\n        return []",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "type": "ia.input.dropdown"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown_2"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.options": {
+                        "binding": {
+                          "config": {
+                            "expression": "concat({../Dropdown.props.value}, \"/\", {../Dropdown_0.props.value}, \"/\",{../Dropdown_1.props.value})"
+                          },
+                          "transforms": [
+                            {
+                              "code": "    selected \u003d value\n    \n    if not selected:\n        return []   # No selection → empty dropdown\n    \n    # Build the tag path: [UNS]Pharma/SelectedFolder\n    path \u003d \"[UNS]Pharma/{}\".format(selected)\n    \n    try:\n        results \u003d system.tag.browse(path)\n        folder_list \u003d []\n        for node in results.getResults():\n            if str(node[\"tagType\"]) \u003d\u003d \"Folder\":\n                name \u003d node[\"name\"]\n                folder_list.append({\"label\": name, \"value\": name})\n        return folder_list\n    except Exception as e:\n        print \"Error browsing {}: {}\".format(path, e)\n        return []",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "type": "ia.input.dropdown"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown_3"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.options": {
+                        "binding": {
+                          "config": {
+                            "expression": "concat({../Dropdown.props.value}, \"/\", {../Dropdown_0.props.value}, \"/\",{../Dropdown_1.props.value}, \"/\",{../Dropdown_2.props.value})"
+                          },
+                          "transforms": [
+                            {
+                              "code": "    selected \u003d value\n    \n    if not selected:\n        return []   # No selection → empty dropdown\n    \n    # Build the tag path: [UNS]Pharma/SelectedFolder\n    path \u003d \"[UNS]Pharma/{}\".format(selected)\n    \n    try:\n        results \u003d system.tag.browse(path)\n        folder_list \u003d []\n        for node in results.getResults():\n                name \u003d node[\"name\"]\n                folder_list.append({\"label\": name, \"value\": name})\n        return folder_list\n    except Exception as e:\n        print \"Error browsing {}: {}\".format(path, e)\n        return []",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "333px"
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "784px"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "basis": "400px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "paddingLeft": "2%",
+        "paddingTop": "1%"
+      },
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

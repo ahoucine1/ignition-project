@@ -1,0 +1,72 @@
+def handleScheduleEvent():
+	provider = "[MQTT Engine]"
+	base = provider + "Edge Nodes"
+	
+	try:
+	    total_devices = 0
+	    groups = system.tag.browse(base)
+	
+	    for group in groups:
+	        group_path = base + "/" + group['name']
+	        # Try to browse this path – if it fails, skip
+	        try:
+	            nodes = system.tag.browse(group_path)
+	        except:
+	            continue
+	
+	        for node in nodes:
+	            node_path = group_path + "/" + node['name']
+	            try:
+	                devices = system.tag.browse(node_path)
+	            except:
+	                continue
+	
+	            # Count any item under the node as a device (folders or tags)
+	            # But to avoid counting telemetry tags, we only count if the item itself is a folder
+	            for device in devices:
+	                # Check if it's a folder using both possible keys
+	                is_folder = device.get('isFolder', False) or device.get('tagType') == 'Folder'
+	                if is_folder:
+	                    total_devices += 1
+	
+	    # Write result to your memory tag
+	    system.tag.writeBlocking(provider + "TotalDeviceCount", total_devices)
+	    print "✅ Total devices counted: " + str(total_devices)
+	
+	except Exception as e:
+	    print "❌ Error: " + str(e)provider = "[MQTT Engine]"
+	base = provider + "Edge Nodes"
+	
+	try:
+	    total_devices = 0
+	    groups = system.tag.browse(base)
+	
+	    for group in groups:
+	        group_path = base + "/" + group['name']
+	        # Try to browse this path – if it fails, skip
+	        try:
+	            nodes = system.tag.browse(group_path)
+	        except:
+	            continue
+	
+	        for node in nodes:
+	            node_path = group_path + "/" + node['name']
+	            try:
+	                devices = system.tag.browse(node_path)
+	            except:
+	                continue
+	
+	            # Count any item under the node as a device (folders or tags)
+	            # But to avoid counting telemetry tags, we only count if the item itself is a folder
+	            for device in devices:
+	                # Check if it's a folder using both possible keys
+	                is_folder = device.get('isFolder', False) or device.get('tagType') == 'Folder'
+	                if is_folder:
+	                    total_devices += 1
+	
+	    # Write result to your memory tag
+	    system.tag.writeBlocking("[UNS]" + "TotalDeviceCount", total_devices)
+	    print "✅ Total devices counted: " + str(total_devices)
+	
+	except Exception as e:
+	    print "❌ Error: " + str(e)

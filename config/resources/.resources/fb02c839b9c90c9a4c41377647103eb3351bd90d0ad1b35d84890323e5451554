@@ -1,0 +1,8 @@
+[
+  {
+    "valueSource": "opc",
+    "dataType": "StringArray",
+    "name": "Site_List",
+    "tagType": "AtomicTag"
+  }
+]

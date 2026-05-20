@@ -1,0 +1,14 @@
+[
+  {
+    "valueSource": "udt",
+    "name": "Test_Machine",
+    "typeId": "[UNS]_types_/AKTA_Chromatography",
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": "[MQTT Engine]Edge Nodes/group2/node2/device1"
+      }
+    },
+    "tagType": "AtomicTag"
+  }
+]

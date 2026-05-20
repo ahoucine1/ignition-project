@@ -1,0 +1,28 @@
+def handleScheduleEvent():
+	provider = "[MQTT Engine]"
+	base = provider + "Edge Nodes"
+	
+	try:
+	    # Get all groups under Edge Nodes
+	    groups = system.tag.browse(base)
+	    total_devices = 0
+	    
+	    for group in groups:
+	        if group.get('isFolder', False):
+	            group_path = base + "/" + group['name']
+	            nodes = system.tag.browse(group_path)
+	            
+	            for node in nodes:
+	                if node.get('isFolder', False):
+	                    node_path = group_path + "/" + node['name']
+	                    devices = system.tag.browse(node_path)
+	                    
+	                    # Count all folders under the node as devices
+	                    for device in devices:
+	                        if device.get('isFolder', False):
+	                            total_devices += 1
+	    
+	    system.tag.writeBlocking("UNS" + "TotalDeviceCount", total_devices)
+	    print "Total devices: " + str(total_devices)  # or use logger
+	except Exception as e:
+	    print "Error: " + str(e)

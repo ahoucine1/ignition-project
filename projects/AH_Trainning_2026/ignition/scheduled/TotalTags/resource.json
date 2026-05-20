@@ -1,0 +1,18 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "handleScheduleEvent.py"
+  ],
+  "attributes": {
+    "cronExpression": "* * * * *",
+    "lastModificationSignature": "fecf83be611679c379848a5a0fa1c8f179932ae7b88b3c605b2bfdb1b63124ec",
+    "lastModification": {
+      "actor": "ahoucine",
+      "timestamp": "2026-05-14T14:57:33Z"
+    },
+    "enabled": true
+  }
+}

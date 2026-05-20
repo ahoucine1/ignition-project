@@ -1,0 +1,399 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1526
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\t# ---------------------------------------------------\n\t# GET VALUES FROM VIEW\n\t# ---------------------------------------------------\n\tself.parent.parent.getChild(\"root\").getChild(\"Dropdown\").props.value\n\tmachine_type \u003d self.parent.parent.getChild(\"root\").getChild(\"Dropdown\").props.value\n\t#site \u003d self.parent.parent.getChild(\"root\").getChild(\"site\").props.text\n\tsite \u003d self.parent.parent.getChild(\"root\").getChild(\"Dropdown_site\").props.value\n\t#area \u003d self.parent.parent.getChild(\"root\").getChild(\"area\").props.text\n\tarea \u003d self.parent.parent.getChild(\"root\").getChild(\"Dropdown_area\").props.value\n\t#line \u003d self.parent.parent.getChild(\"root\").getChild(\"line\").props.text\n\tline \u003d self.parent.parent.getChild(\"root\").getChild(\"Dropdown_line\").props.value\n\tmachine \u003d self.parent.parent.getChild(\"root\").getChild(\"machine\").props.text\n\tinstance_name \u003d self.parent.parent.getChild(\"root\").getChild(\"instance_name\").props.text\n\t\n\tselection \u003d self.getSibling(\"TagBrowseTree\").props.selection.values\n\t\n\t# ---------------------------------------------------\n\t# VALIDATION\n\t# ---------------------------------------------------\n\t\n\tselection \u003d self.getSibling(\"TagBrowseTree\").props.selection.values\n\n\tif (\n\t    not machine_type or\n\t    not site or\n\t    not area or\n\t    not line or\n\t    not machine or\n\t    not instance_name or\n\t    not selection or\n\t    len(selection) \u003d\u003d 0\n\t):\n\t\n\t    system.perspective.openPopup(\n\t        id\u003d\"validationPopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\n\t            \"display\": \"Please fill in all fields and select a source tag.\"\n\t        },\n\t        title\u003d\"Error\",\n\t        modal\u003dTrue\n\t    )\n\t\n\t    return\n\t\n\t# ---------------------------------------------------\n\t# SAFE SOURCE TAG\n\t# ---------------------------------------------------\n\t\n\tsource_tag_path \u003d str(selection[0])\n\t\n\t# ---------------------------------------------------\n\t# BUILD PATH\n\t# ---------------------------------------------------\n\t\n\tuns_provider \u003d \"UNS\"\n\t\n\tbase_path \u003d \"[{}]/Pharma/{}/{}/{}/{}\".format(\n\t    uns_provider,\n\t    site,\n\t    area,\n\t    line,\n\t    machine\n\t)\n\t\n\tinstance_path \u003d \"{}/{}\".format(base_path, instance_name)\n\t\n\tudt_type_path \u003d machine_type\n\t\n\t# ---------------------------------------------------\n\t# CHECK DUPLICATE\n\t# ---------------------------------------------------\n\t\n\tif system.tag.exists(instance_path):\n\t\n\t    system.perspective.openPopup(\n\t        id\u003d\"duplicatePopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\n\t            \"display\": \"Machine \u0027{}\u0027 already exists in this location.\".format(instance_name)\n\t        },\n\t        title\u003d\"Duplicate Error\",\n\t        modal\u003dTrue\n\t    )\n\t\n\t    return\n\t\n\t# ---------------------------------------------------\n\t# CREATE UDT INSTANCE\n\t# ---------------------------------------------------\n\t\n\ttry:\n\t\n\t    tag_definition \u003d {\n\t        \"name\": instance_name,\n\t        \"tagType\": \"UdtInstance\",\n\t        \"typeId\": udt_type_path,\n\t        \"parameters\": {\n\t            \"site\": site,\n\t            \"area\": area,\n\t            \"line\": line,\n\t            \"machine\": machine,\n\t            \"source\": source_tag_path\n\t        }\n\t    }\n\t\n\t    system.tag.configure(base_path, [tag_definition])\n\t    self.getSibling(\"TagBrowseTree\").props.selection \u003d {\n    \t\"values\": []\n\t\t}\n\t\n\t    # ---------------------------------------------------\n\t    # SUCCESS POPUP\n\t    # ---------------------------------------------------\n\t\n\t    system.perspective.openPopup(\n\t        id\u003d\"validationPopup\",\n\t        view\u003d\"ValidationPopup\",\n\t        params\u003d{\n\t            \"instance_path\": instance_path\n\t        },\n\t        title\u003d\"Validation\",\n\t        modal\u003dTrue\n\t    )\n\t\n\texcept Exception as e:\n\t\n\t    # ---------------------------------------------------\n\t    # ERROR POPUP\n\t    # ---------------------------------------------------\n\t\n\t    system.perspective.openPopup(\n\t        id\u003d\"errorPopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\n\t            \"display\": \"Error creating machine: {}\".format(str(e))\n\t        },\n\t        title\u003d\"Error\",\n\t        modal\u003dTrue\n\t    )"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "props": {
+              "text": "create new machine"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "TagBrowseTree"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "root": {
+                "path": "[MQTT Engine]Edge Nodes"
+              },
+              "style": {
+                "marginBottom": "3%"
+              }
+            },
+            "type": "ia.display.tag-browse-tree"
+          },
+          {
+            "meta": {
+              "name": "Label_5"
+            },
+            "props": {
+              "text": "Add New Machine"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "56.6%"
+        },
+        "props": {
+          "alignItems": "center",
+          "direction": "column-reverse",
+          "style": {
+            "paddingBottom": "1%"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onFileReceived": {
+                  "config": {
+                    "script": "\t# Grab the file data using the correct method\n\tfileBytes \u003d event.file.getBytes()\n\tfilename \u003d event.file.name\n\t\n\t# Parse the Excel bytes using Apache POI\n\tfrom org.apache.poi.ss.usermodel import WorkbookFactory\n\tfrom java.io import ByteArrayInputStream\n\tfrom com.inductiveautomation.ignition.common import DatasetUtilities\n\t\n\tinput_stream \u003d ByteArrayInputStream(fileBytes)\n\tworkbook \u003d WorkbookFactory.create(input_stream)\n\tsheet \u003d workbook.getSheetAt(0)\n\t\n\t# Read all rows into a list of lists (including header)\n\trows \u003d []\n\theader_row \u003d sheet.getRow(0)\n\tif header_row is None:\n\t    workbook.close()\n\t    return\n\t\n\tcol_count \u003d header_row.getLastCellNum()\n\theaders \u003d []\n\tfor col in range(col_count):\n\t    cell \u003d header_row.getCell(col)\n\t    if cell:\n\t        headers.append(cell.toString().strip())\n\t    else:\n\t        headers.append(\"Column_{}\".format(col))\n\t\n\trows.append(headers)\n\t\n\t# Read data rows\n\tfor row_idx in range(1, sheet.getLastRowNum() + 1):\n\t    row \u003d sheet.getRow(row_idx)\n\t    if row is None:\n\t        continue\n\t    row_data \u003d []\n\t    for col in range(col_count):\n\t        cell \u003d row.getCell(col)\n\t        if cell is None:\n\t            row_data.append(\"\")\n\t        elif cell.getCellType() \u003d\u003d 0:  # numeric\n\t            val \u003d cell.getNumericCellValue()\n\t            if val \u003d\u003d int(val):\n\t                row_data.append(str(int(val)))\n\t            else:\n\t                row_data.append(str(val))\n\t        else:\n\t            row_data.append(cell.toString().strip())\n\t    rows.append(row_data)\n\t\n\tworkbook.close()\n\t\n\t# Convert to Ignition Dataset\n\tdataset \u003d DatasetUtilities.toDataset(headers, rows)\n\t\n\t# Write to memory tag\n\tsystem.tag.writeBlocking(\"[UNS]UploadedExcelData\", dataset)\n\t\n\t# Optional: Print to gateway console (no f-string)\n\tsystem.perspective.print(\"File \u0027{}\u0027 processed successfully.\".format(filename))\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              },
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\t# Get uploaded file\n\tupload \u003d self.parent.getChild(\"excelUpload\")\n\tif not upload.props.value or len(upload.props.value) \u003d\u003d 0:\n\t    system.perspective.openPopup(\n\t        id\u003d\"uploadErrorPopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\"display\": \"Please upload an Excel file first.\"},\n\t        title\u003d\"Error\",\n\t        modal\u003dTrue\n\t    )\n\t    return\n\t\n\tfile_data \u003d upload.props.value[0]\n\texcel_bytes \u003d file_data[\u0027data\u0027]\n\t\n\t# Parse Excel\n\tfrom org.apache.poi.ss.usermodel import WorkbookFactory\n\tfrom java.io import ByteArrayInputStream\n\t\n\tinput_stream \u003d ByteArrayInputStream(excel_bytes)\n\tworkbook \u003d WorkbookFactory.create(input_stream)\n\tsheet \u003d workbook.getSheetAt(0)\n\t\n\texpected_headers \u003d [\"Site\", \"Area\", \"Line\", \"Machine\", \"Instance name\", \"MQTT Engine Path\", \"Machine Model\"]\n\t\n\t# Find column indexes\n\theader_row \u003d sheet.getRow(0)\n\tcol_index \u003d {}\n\tfor idx, cell in enumerate(header_row):\n\t    cell_value \u003d cell.toString().strip()\n\t    for h in expected_headers:\n\t        if cell_value.lower() \u003d\u003d h.lower():\n\t            col_index[h] \u003d idx\n\t            break\n\t\n\tmissing \u003d [h for h in expected_headers if h not in col_index]\n\tif missing:\n\t    system.perspective.openPopup(\n\t        id\u003d\"missingColumnsPopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\"display\": \"Missing columns: \" + \", \".join(missing)},\n\t        title\u003d\"Error\",\n\t        modal\u003dTrue\n\t    )\n\t    return\n\t\n\tdef get_cell_value(row, col):\n\t    cell \u003d row.getCell(col)\n\t    if cell is None:\n\t        return \"\"\n\t    if cell.getCellType() \u003d\u003d 0:  # numeric\n\t        val \u003d cell.getNumericCellValue()\n\t        return str(int(val)) if val \u003d\u003d int(val) else str(val)\n\t    return cell.toString().strip()\n\t\n\tcreated \u003d []\n\terrors \u003d []\n\t\n\tfor row_idx in range(1, sheet.getLastRowNum() + 1):\n\t    row \u003d sheet.getRow(row_idx)\n\t    if row is None:\n\t        continue\n\t\n\t    site \u003d get_cell_value(row, col_index[\"Site\"])\n\t    area \u003d get_cell_value(row, col_index[\"Area\"])\n\t    line \u003d get_cell_value(row, col_index[\"Line\"])\n\t    machine \u003d get_cell_value(row, col_index[\"Machine\"])\n\t    instance_name \u003d get_cell_value(row, col_index[\"Instance name\"])\n\t    mqtt_path \u003d get_cell_value(row, col_index[\"MQTT Engine Path\"])\n\t    machine_model \u003d get_cell_value(row, col_index[\"Machine Model\"])\n\t\n\t    # --- Validate all fields present ---\n\t    missing_fields \u003d []\n\t    if not site: missing_fields.append(\"Site\")\n\t    if not area: missing_fields.append(\"Area\")\n\t    if not line: missing_fields.append(\"Line\")\n\t    if not machine: missing_fields.append(\"Machine\")\n\t    if not instance_name: missing_fields.append(\"Instance name\")\n\t    if not mqtt_path: missing_fields.append(\"MQTT Engine Path\")\n\t    if not machine_model: missing_fields.append(\"Machine Model\")\n\t    if missing_fields:\n\t        errors.append(\"Row {}: Missing: {}\".format(row_idx+1, \", \".join(missing_fields)))\n\t        continue\n\t\n\t    # --- Clean strings for tag path ---\n\t    def clean(s):\n\t        return s.strip().replace(\" \", \"_\")\n\t    \n\t    site_clean \u003d clean(site)\n\t    area_clean \u003d clean(area)\n\t    line_clean \u003d clean(line)\n\t    machine_clean \u003d clean(machine)\n\t    instance_name_clean \u003d clean(instance_name)\n\t    \n\t    target_folder \u003d \"[UNS]Pharma/{}/{}/{}/{}\".format(site_clean, area_clean, line_clean, machine_clean)\n\t    full_instance_path \u003d \"{}/{}\".format(target_folder, instance_name_clean)\n\t    \n\t    # --- Check if instance already exists ---\n\t    if system.tag.exists(full_instance_path):\n\t        errors.append(\"Row {}: Instance \u0027{}\u0027 already exists at {}\".format(row_idx+1, instance_name_clean, target_folder))\n\t        continue\n\t\n\t    # --- Validate MQTT Engine Path exists as a tag ---\n\t    if not system.tag.exists(mqtt_path):\n\t        errors.append(\"Row {}: MQTT Engine Path \u0027{}\u0027 does not exist\".format(row_idx+1, mqtt_path))\n\t        continue\n\t\n\t    # --- Validate UDT type exists under [UNS]_types_/ ---\n\t    udt_type_path \u003d \"[UNS]_types_/{}\".format(machine_model)\n\t    if not system.tag.exists(udt_type_path):\n\t        errors.append(\"Row {}: UDT type \u0027{}\u0027 not found at {}\".format(row_idx+1, machine_model, udt_type_path))\n\t        continue\n\t\n\t    # --- Create UDT instance ---\n\t    try:\n\t        config \u003d {\n\t            \"name\": instance_name_clean,\n\t            \"path\": full_instance_path,\n\t            \"typeId\": udt_type_path,\n\t            \"valueSource\": \"udt\",\n\t            \"parameters\": {\n\t                \"source\": mqtt_path\n\t            }\n\t        }\n\t        system.tag.configure(full_instance_path, config)\n\t        created.append(\"Row {}: Created {} with source\u003d{}\".format(row_idx+1, full_instance_path, mqtt_path))\n\t    except Exception as e:\n\t        errors.append(\"Row {}: Failed - {}\".format(row_idx+1, str(e)))\n\t\n\tworkbook.close()\n\t\n\t# --- Build summary message ---\n\tsummary_message \u003d \"Created: {}\\nErrors: {}\".format(len(created), len(errors))\n\tif errors:\n\t    summary_message +\u003d \"\\n\\nErrors:\\n\" + \"\\n\".join(errors[:10])\n\t    if len(errors) \u003e 10:\n\t        summary_message +\u003d \"\\n... and {} more\".format(len(errors)-10)\n\tif created:\n\t    summary_message +\u003d \"\\n\\nCreated:\\n\" + \"\\n\".join(created[:5])\n\t    if len(created) \u003e 5:\n\t        summary_message +\u003d \"\\n... and {} more\".format(len(created)-5)\n\t\n\t# Show final summary in popup\n\tif errors:\n\t    popup_title \u003d \"Completed with Errors\"\n\telse:\n\t    popup_title \u003d \"Success\"\n\t\n\tsystem.perspective.openPopup(\n\t    id\u003d\"summaryPopup\",\n\t    view\u003d\"ErrorPopup\",\n\t    params\u003d{\"display\": summary_message},\n\t    title\u003dpopup_title,\n\t    modal\u003dTrue\n\t)"
+                  },
+                  "enabled": false,
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "FileUpload"
+            },
+            "position": {
+              "height": 98,
+              "width": 304,
+              "x": 306.82,
+              "y": 163
+            },
+            "props": {
+              "maxUploads": 1,
+              "supportedFileTypes": [
+                "xlsx"
+              ]
+            },
+            "type": "ia.input.fileupload"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "height": 36,
+              "width": 256,
+              "x": 43.840199999999996,
+              "y": 441
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "AKTA Model",
+                  "value": "[UNS]_types_/AKTA_Chromatography"
+                },
+                {
+                  "label": "Sensor udt",
+                  "value": "[UNS]_types_/sensor"
+                }
+              ],
+              "placeholder": {
+                "text": "Select Machine Type"
+              }
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 32,
+              "width": 50,
+              "x": 73.785,
+              "y": 9
+            },
+            "props": {
+              "text": "Site:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 32,
+              "width": 50,
+              "x": 71.785,
+              "y": 92
+            },
+            "props": {
+              "text": "Area:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "height": 32,
+              "width": 50,
+              "x": 70.785,
+              "y": 173
+            },
+            "props": {
+              "text": "Line:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 32,
+              "width": 81,
+              "x": 70.785,
+              "y": 251
+            },
+            "props": {
+              "text": "Machine:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_4"
+            },
+            "position": {
+              "height": 32,
+              "width": 140,
+              "x": 70.785,
+              "y": 324.33
+            },
+            "props": {
+              "text": "Instance Name:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "machine"
+            },
+            "position": {
+              "height": 32,
+              "width": 235,
+              "x": 53.122,
+              "y": 288.33
+            },
+            "props": {
+              "placeholder": "enter machine"
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "instance_name"
+            },
+            "position": {
+              "height": 32,
+              "width": 235,
+              "x": 53.122,
+              "y": 361.33
+            },
+            "props": {
+              "placeholder": "enter instance name"
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "Label_6"
+            },
+            "position": {
+              "height": 32,
+              "width": 174,
+              "x": 66.785,
+              "y": 401.65
+            },
+            "props": {
+              "text": "Select Machine Model"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Dropdown_site"
+            },
+            "position": {
+              "height": 34,
+              "width": 221,
+              "x": 53.94,
+              "y": 41
+            },
+            "propConfig": {
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[UNS]SiteList.value"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "placeholder": {
+                "text": "Select Site"
+              }
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Dropdown_area"
+            },
+            "position": {
+              "height": 34,
+              "width": 221,
+              "x": 53.324,
+              "y": 124
+            },
+            "propConfig": {
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[UNS]AreaList.value"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "placeholder": {
+                "text": "Select Area"
+              }
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Dropdown_line"
+            },
+            "position": {
+              "height": 34,
+              "width": 221,
+              "x": 53.324,
+              "y": 205
+            },
+            "propConfig": {
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[UNS]LineList.value"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "placeholder": {
+                "text": "Select Line"
+              }
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\t\t# Get the File Upload component\n\tupload \u003d self.getSibling(\"FileUpload\")\n\t\n\t# Check if any file has been uploaded\n\tif not upload.props.value or len(upload.props.value) \u003d\u003d 0:\n\t    system.perspective.openPopup(\n\t        id\u003d\"noFilePopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\"display\": \"No file uploaded. Please upload an Excel file first.\"},\n\t        title\u003d\"Error\",\n\t        modal\u003dTrue\n\t    )\n\t    return\n\t\n\t# Get the first uploaded file\u0027s data\n\tfile_data \u003d upload.props.value[0]\n\texcel_bytes \u003d file_data[\u0027data\u0027]\n\t\n\t# ------------------------------------------------------------\n\t# Parse Excel and process each row\n\t# ------------------------------------------------------------\n\tfrom org.apache.poi.ss.usermodel import WorkbookFactory\n\tfrom java.io import ByteArrayInputStream\n\t\n\tinput_stream \u003d ByteArrayInputStream(excel_bytes)\n\tworkbook \u003d WorkbookFactory.create(input_stream)\n\tsheet \u003d workbook.getSheetAt(0)\n\t\n\texpected_headers \u003d [\"Site\", \"Area\", \"Line\", \"Machine\", \"Instance name\", \"MQTT Engine Path\", \"Machine Model\"]\n\t\n\t# Find column indexes\n\theader_row \u003d sheet.getRow(0)\n\tcol_index \u003d {}\n\tfor idx, cell in enumerate(header_row):\n\t    cell_value \u003d cell.toString().strip()\n\t    for h in expected_headers:\n\t        if cell_value.lower() \u003d\u003d h.lower():\n\t            col_index[h] \u003d idx\n\t            break\n\t\n\tmissing \u003d [h for h in expected_headers if h not in col_index]\n\tif missing:\n\t    system.perspective.openPopup(\n\t        id\u003d\"missingColumnsPopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\"display\": \"Missing columns: \" + \", \".join(missing)},\n\t        title\u003d\"Error\",\n\t        modal\u003dTrue\n\t    )\n\t    workbook.close()\n\t    return\n\t\n\tdef get_cell_value(row, col):\n\t    cell \u003d row.getCell(col)\n\t    if cell is None:\n\t        return \"\"\n\t    if cell.getCellType() \u003d\u003d 0:  # numeric\n\t        val \u003d cell.getNumericCellValue()\n\t        return str(int(val)) if val \u003d\u003d int(val) else str(val)\n\t    return cell.toString().strip()\n\t\n\tcreated \u003d []\n\terrors \u003d []\n\t\n\tfor row_idx in range(1, sheet.getLastRowNum() + 1):\n\t    row \u003d sheet.getRow(row_idx)\n\t    if row is None:\n\t        continue\n\t\n\t    site \u003d get_cell_value(row, col_index[\"Site\"])\n\t    area \u003d get_cell_value(row, col_index[\"Area\"])\n\t    line \u003d get_cell_value(row, col_index[\"Line\"])\n\t    machine \u003d get_cell_value(row, col_index[\"Machine\"])\n\t    instance_name \u003d get_cell_value(row, col_index[\"Instance name\"])\n\t    mqtt_path \u003d get_cell_value(row, col_index[\"MQTT Engine Path\"])\n\t    machine_model \u003d get_cell_value(row, col_index[\"Machine Model\"])\n\t\n\t    # Validate all fields present\n\t    missing_fields \u003d []\n\t    if not site: missing_fields.append(\"Site\")\n\t    if not area: missing_fields.append(\"Area\")\n\t    if not line: missing_fields.append(\"Line\")\n\t    if not machine: missing_fields.append(\"Machine\")\n\t    if not instance_name: missing_fields.append(\"Instance name\")\n\t    if not mqtt_path: missing_fields.append(\"MQTT Engine Path\")\n\t    if not machine_model: missing_fields.append(\"Machine Model\")\n\t    if missing_fields:\n\t        errors.append(\"Row {}: Missing: {}\".format(row_idx+1, \", \".join(missing_fields)))\n\t        continue\n\t\n\t    # Clean strings for tag paths\n\t    def clean(s):\n\t        return s.strip().replace(\" \", \"_\")\n\t    \n\t    site_clean \u003d clean(site)\n\t    area_clean \u003d clean(area)\n\t    line_clean \u003d clean(line)\n\t    machine_clean \u003d clean(machine)\n\t    instance_name_clean \u003d clean(instance_name)\n\t    \n\t    target_folder \u003d \"[UNS]Pharma/{}/{}/{}/{}\".format(site_clean, area_clean, line_clean, machine_clean)\n\t    full_instance_path \u003d \"{}/{}\".format(target_folder, instance_name_clean)\n\t    \n\t    # Check if instance already exists\n\t    if system.tag.exists(full_instance_path):\n\t        errors.append(\"Row {}: Instance \u0027{}\u0027 already exists at {}\".format(row_idx+1, instance_name_clean, target_folder))\n\t        continue\n\t\n\t    # Validate MQTT Engine Path exists as a tag\n\t    if not system.tag.exists(mqtt_path):\n\t        errors.append(\"Row {}: MQTT Engine Path \u0027{}\u0027 does not exist\".format(row_idx+1, mqtt_path))\n\t        continue\n\t\n\t    # Validate UDT type exists under [UNS]_types_/\n\t    udt_type_path \u003d \"[UNS]_types_/{}\".format(machine_model)\n\t    if not system.tag.exists(udt_type_path):\n\t        errors.append(\"Row {}: UDT type \u0027{}\u0027 not found at {}\".format(row_idx+1, machine_model, udt_type_path))\n\t        continue\n\t\n\t    # Create UDT instance\n\t    try:\n\t        config \u003d {\n\t            \"name\": instance_name_clean,\n\t            \"path\": full_instance_path,\n\t            \"typeId\": udt_type_path,\n\t            \"valueSource\": \"udt\",\n\t            \"parameters\": {\n\t                \"source\": mqtt_path\n\t            }\n\t        }\n\t        system.tag.configure(full_instance_path, config)\n\t        created.append(\"Row {}: Created {} with source\u003d{}\".format(row_idx+1, full_instance_path, mqtt_path))\n\t    except Exception as e:\n\t        errors.append(\"Row {}: Failed - {}\".format(row_idx+1, str(e)))\n\t\n\tworkbook.close()\n\t\n\t# ------------------------------------------------------------\n\t# Clear the uploaded file from the File Upload component\n\t# ------------------------------------------------------------\n\tupload.props.value \u003d []\n\t\n\t# ------------------------------------------------------------\n\t# Show final summary popup\n\t# ------------------------------------------------------------\n\tsummary_message \u003d \"Created: {}\\nErrors: {}\".format(len(created), len(errors))\n\tif errors:\n\t    summary_message +\u003d \"\\n\\nErrors:\\n\" + \"\\n\".join(errors[:10])\n\t    if len(errors) \u003e 10:\n\t        summary_message +\u003d \"\\n... and {} more\".format(len(errors)-10)\n\tif created:\n\t    summary_message +\u003d \"\\n\\nCreated:\\n\" + \"\\n\".join(created[:5])\n\t    if len(created) \u003e 5:\n\t        summary_message +\u003d \"\\n... and {} more\".format(len(created)-5)\n\t\n\tpopup_title \u003d \"Completed with Errors\" if errors else \"Success\"\n\t\n\tsystem.perspective.openPopup(\n\t    id\u003d\"summaryPopup\",\n\t    view\u003d\"ErrorPopup\",\n\t    params\u003d{\"display\": summary_message},\n\t    title\u003dpopup_title,\n\t    modal\u003dTrue\n\t)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "height": 34,
+              "width": 176,
+              "x": 394.51,
+              "y": 431
+            },
+            "props": {
+              "text": "create new machines"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "root",
+          "tooltip": {
+            "width": "100%"
+          }
+        },
+        "position": {
+          "basis": "611px"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "marginLeft": "5%"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

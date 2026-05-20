@@ -1,18 +1,18 @@
 [
   {
     "usr": {
-      "dataType": "Boolean",
-      "documentation": "Writeable tag to request the Edge Node to walk to the next MQTT server"
-    },
-    "name": "Next Server",
-    "tagType": "AtomicTag"
-  },
-  {
-    "usr": {
       "readOnly": true,
       "dataType": "Boolean"
     },
     "name": "Delete UNS Tags",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Boolean",
+      "documentation": "Writeable tag to request the Edge Node to walk to the next MQTT server"
+    },
+    "name": "Next Server",
     "tagType": "AtomicTag"
   },
   {

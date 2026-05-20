@@ -8,16 +8,16 @@
   },
   {
     "usr": {
-      "dataType": "Int2"
+      "dataType": "Float8"
     },
-    "name": "RunControl",
+    "name": "CaseCount",
     "tagType": "AtomicTag"
   },
   {
     "usr": {
-      "dataType": "Float8"
+      "dataType": "Int2"
     },
-    "name": "CaseCount",
+    "name": "RunControl",
     "tagType": "AtomicTag"
   },
   {

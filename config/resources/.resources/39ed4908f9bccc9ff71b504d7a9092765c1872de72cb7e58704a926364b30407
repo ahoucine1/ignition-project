@@ -1,0 +1,10 @@
+[
+  {
+    "valueSource": "memory",
+    "valuePersistence": "None",
+    "dataType": "StringArray",
+    "name": "Site_List",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

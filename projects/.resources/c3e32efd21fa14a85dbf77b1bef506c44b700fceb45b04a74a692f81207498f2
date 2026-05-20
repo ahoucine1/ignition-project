@@ -1,0 +1,18 @@
+def handleScheduleEvent():
+	provider = "[MQTT Engine]Edge Nodes"
+	total = 0
+	groups = system.tag.browse(base)
+	for group in groups:
+	    group_path = base + "/" + group['name']
+	    nodes = system.tag.browse(group_path)
+	    for node in nodes:
+	        node_path = group_path + "/" + node['name']
+	        devices = system.tag.browse(node_path)
+	        for device in devices:
+	            name = device['name']
+	            # Skip known non‑device folders
+	            if name not in ["Node Control", "Node Info"]:
+	                total += 1
+	
+	print("Total devices: " + str(total))
+	system.tag.writeBlocking("[UNS]" + "TotalDeviceCount", total)

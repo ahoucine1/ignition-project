@@ -1,0 +1,25 @@
+def handleScheduleEvent():
+	provider = "[MQTT Engine]"
+	base_path = "Edge Nodes"
+	
+	def count_devices(folder_path):
+	    device_count = 0
+	    children = system.tag.browse(folder_path)
+	    for child in children:
+	        child_full = folder_path + "/" + child.name
+	        if child.isFolder():
+	            sub_children = system.tag.browse(child_full)
+	            # Check if this folder contains "Device Info" (device marker)
+	            if any(sub.name == "Device Info" for sub in sub_children):
+	                device_count += 1
+	            else:
+	                device_count += count_devices(child_full)
+	    return device_count
+	
+	full_base = provider + base_path
+	try:
+	    total = count_devices(full_base)
+	    system.tag.writeBlocking(provider + "TotalDeviceCount", total)
+	    system.util.getLogger("DeviceCounter").info("Total devices counted: " + str(total))
+	except Exception as e:
+	    system.util.getLogger("DeviceCounter").error("Error counting devices: " + str(e))
