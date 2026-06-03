@@ -1,0 +1,72 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "KeepAlive_REQ_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "INSPECTION_REQUEST_RES_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "INSPECTION_RESULT_REQ_InspectionTime",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "INSPECTION_RECIPE_ONCHANGE_RES_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "PROGRAM",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "INSPECTION_RESULT_RES_Error",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "KeepAlive_RES_XML",
+    "tagType": "AtomicTag"
+  }
+]

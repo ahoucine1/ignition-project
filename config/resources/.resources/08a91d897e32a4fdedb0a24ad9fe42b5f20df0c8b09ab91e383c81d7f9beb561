@@ -1,0 +1,122 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVF_BOARD_IN",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVC_OUTLET_LOCKED",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVF_REQ_LOCK_OUTLET_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVF_EQUIP_STATUS",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVC_BOARD_OUT",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVS_ERROR_TXT",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVX_OUTLET_LOCKED",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVR_ERROR_ID",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVS_BOARD_OUT_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVI_PROGRAM",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVR_BOARD_OUT",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVC_PROGRAM_LOAD_REQ",
+    "tagType": "AtomicTag"
+  }
+]

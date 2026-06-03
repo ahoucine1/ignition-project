@@ -1,0 +1,32 @@
+[
+  {
+    "usr": {
+      "dataType": "Int2"
+    },
+    "name": "CurrentOrder",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Float8",
+      "historyProvider": "core_historian",
+      "historyEnabled": true
+    },
+    "name": "CaseCount",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Int2"
+    },
+    "name": "RunControl",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Int2"
+    },
+    "name": "CurrentRun",
+    "tagType": "AtomicTag"
+  }
+]

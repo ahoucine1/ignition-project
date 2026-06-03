@@ -1,0 +1,16 @@
+[
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "INSPECTION_RESULT_RES_Error",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "INSPECTION_RESULT_REQ_PCB_NC_RES_Error",
+    "tagType": "AtomicTag"
+  }
+]

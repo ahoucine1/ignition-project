@@ -1,0 +1,92 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVX_ENGINEERING_MODE",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVU_ENGINEERING_MODE",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVU_BOARD_OUT_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVX_EQUIP_STATUS",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVF_ERROR_TXT",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVU_EQUIP_STATUS",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVB_PROGRAM_LOAD_REQ_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVT_REQ_LOCK_OUTLET_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "CVB_ERROR_ID",
+    "tagType": "AtomicTag"
+  }
+]

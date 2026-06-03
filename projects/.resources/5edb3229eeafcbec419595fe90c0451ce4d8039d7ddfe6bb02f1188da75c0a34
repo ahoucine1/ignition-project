@@ -1,0 +1,819 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "100%"
+            },
+            "props": {
+              "style": {
+                "fontSize": 20,
+                "fontWeight": "bold"
+              },
+              "text": "Monitoring page"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_2"
+        },
+        "position": {
+          "basis": "48px"
+        },
+        "props": {
+          "alignItems": "center",
+          "direction": "column",
+          "justify": "space-around",
+          "style": {
+            "marginLeft": "2%"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label_2"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FFFFFF"
+                      },
+                      "text": "Total Devices"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_1"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[MQTT Engine]Engine Info/Devices/DeviceCount"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FFFFFF"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "borderColor": "#000000",
+                    "borderStyle": "solid",
+                    "marginLeft": "4%",
+                    "marginRight": "50%"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "33%",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label_2"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FF0000"
+                      },
+                      "text": "Offline Devices"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_1"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[MQTT Engine]Engine Info/Devices/DevicesOffline"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FF0000"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "borderColor": "#000000",
+                    "borderStyle": "solid",
+                    "marginRight": "50%"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "34%",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label_2"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#00D900"
+                      },
+                      "text": "Connected Devices"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_1"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "expression": "{[MQTT Engine]Engine Info/Devices/DeviceCount.value} - {[MQTT Engine]Engine Info/Devices/DevicesOffline.value}"
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#00D900"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "borderColor": "#000000",
+                    "borderStyle": "solid",
+                    "marginRight": "50%"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "33%",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "48px"
+        },
+        "props": {
+          "justify": "space-between",
+          "style": {
+            "marginLeft": "2%"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FFFFFF"
+                      },
+                      "text": "Total Tags"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_0"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[UNS]TotalTags.value"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FFFFFF"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "borderColor": "#000000",
+                    "borderStyle": "solid",
+                    "marginLeft": "4%",
+                    "marginRight": "50%"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "33%",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FF0000"
+                      },
+                      "text": "Not Recieved Tags"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_0"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[UNS]NotComingTags.value"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#FF0000"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "borderColor": "#000000",
+                    "borderStyle": "solid",
+                    "marginRight": "50%"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "34%",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#00D900"
+                      },
+                      "text": "Recieved Tags"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_0"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "expression": "{[UNS]TotalTags.value} - {[UNS]NotComingTags.value}"
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#00D900"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "borderColor": "#000000",
+                    "borderStyle": "solid",
+                    "marginRight": "50%"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "33%",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "48px"
+        },
+        "props": {
+          "style": {
+            "marginBottom": "1%",
+            "marginLeft": "2%",
+            "marginTop": "1%"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "TagBrowseTree"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "root": {
+                    "path": "[UNS]Pharma"
+                  }
+                },
+                "type": "ia.display.tag-browse-tree"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "30%",
+              "shrink": 10
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontWeight": "bold",
+                    "marginLeft": "2%",
+                    "paddingLeft": "2%"
+                  },
+                  "text": "Machine Data:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_1"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "marginLeft": "2%",
+                    "paddingLeft": "2%"
+                  },
+                  "text": "Status:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "propConfig": {
+                  "props.style.color": {
+                    "binding": {
+                      "config": {
+                        "path": "this.props.text"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": null,
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": "select machine",
+                              "output": "black"
+                            },
+                            {
+                              "input": "connected",
+                              "output": "green"
+                            },
+                            {
+                              "input": "offline",
+                              "output": "red"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": ".../FlexContainer_0/TagBrowseTree.props.selection.values"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\n    try:\n        # Read source parameter\n        path \u003d str(value[0])\n        source \u003d system.tag.readBlocking([path + \"/Parameters.source\"])[0].value\n\n        # If source is null/empty\n        if not source:\n            return \"select machine\"\n\n        # Remove last path segment\n        base_path \u003d source.rsplit(\"/\", 1)[0]\n\n        # Build Online tag path\n        online_path \u003d base_path + \"/Device Info/Online\"\n\n        # Read Online tag\n        online \u003d system.tag.readBlocking([online_path])[0].value\n\n        if online:\n            return \"connected\"\n        else:\n            return \"offline\"\n\n    except:\n        return \"select machine\"\n",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "marginLeft": "2%",
+                    "paddingLeft": "2%"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_2"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "marginLeft": "2%",
+                    "paddingLeft": "2%"
+                  },
+                  "text": "Received tags:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_4"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": ".../FlexContainer_0/TagBrowseTree.props.selection.values"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\n    try:\n        path \u003d str(value[0])\n\n        # Read UDT parameter\n        source \u003d system.tag.readBlocking([path + \"/Parameters.source\"])[0].value\n\n        if not source:\n            return \"select machine\"\n\n        # Remove last part of source (machine node)\n        base_path \u003d source.rsplit(\"/\", 1)[0]\n\n        # -----------------------------\n        # 1. Check Online status\n        # -----------------------------\n        online_path \u003d base_path + \"/Device Info/Online\"\n        online \u003d system.tag.readBlocking([online_path])[0].value\n\n        # -----------------------------\n        # 2. Count received (good) tags\n        # -----------------------------\n        def count_good_tags(p):\n            good \u003d 0\n            total \u003d 0\n\n            try:\n                children \u003d system.tag.browse(p)\n\n                for child in children:\n                    tag_type \u003d str(child[\u0027tagType\u0027])\n                    full_path \u003d str(child[\u0027fullPath\u0027])\n\n                    if tag_type \u003d\u003d \u0027AtomicTag\u0027:\n                        total +\u003d 1\n\n                        try:\n                            q \u003d system.tag.readBlocking([full_path])[0].quality\n                            if q.isGood():\n                                good +\u003d 1\n                        except:\n                            pass\n\n                    elif tag_type in (\u0027Folder\u0027, \u0027UDT\u0027, \u0027UdtInstance\u0027, \u0027UDT Instance\u0027):\n                        g, t \u003d count_good_tags(full_path)\n                        good +\u003d g\n                        total +\u003d t\n\n            except:\n                pass\n\n            return good, total\n\n        received, total \u003d count_good_tags(path)\n\n        # -----------------------------\n        # 3. Return logic\n        # -----------------------------\n        # You can choose what to return:\n        return \"{}/{}\".format(received, total)  # only received tags count\n\n        # OR if you want richer output:\n        # return \"online: {}, received: {}/{}\".format(online, received, total)\n\n    except:\n        return \"select machine\"",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "marginLeft": "2%",
+                    "paddingLeft": "2%"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_3"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "marginLeft": "2%",
+                    "paddingLeft": "2%"
+                  },
+                  "text": "Last error message:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_5"
+                },
+                "position": {
+                  "basis": "41px"
+                },
+                "propConfig": {
+                  "props.style.color": {
+                    "binding": {
+                      "config": {
+                        "path": "this.props.text"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "if(\r\n    {this.props.text} \u003d \"select machine\",\r\n    \"black\",\r\n    \"red\"\r\n)",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": ".../FlexContainer_0/TagBrowseTree.props.selection.values"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\n\n    try:\n        # ---------------------------------\n        # 1. Validate input\n        # ---------------------------------\n        if not value or len(value) \u003d\u003d 0:\n            return \"select machine\"\n\n        path \u003d str(value[0])\n\n        if not path:\n            return \"select machine\"\n\n        # ---------------------------------\n        # 2. Read source parameter\n        # ---------------------------------\n        source_result \u003d system.tag.readBlocking(\n            [path + \"/Parameters.source\"]\n        )[0]\n\n        source \u003d source_result.value\n\n        if not source:\n            return \"select machine\"\n\n        # ---------------------------------\n        # 3. Remove last node\n        # ---------------------------------\n        base_path \u003d source.rsplit(\"/\", 1)[0]\n\n        # ---------------------------------\n        # 4. Remove MQTT Engine prefix\n        # ---------------------------------\n        prefix \u003d \"[MQTT Engine]Edge Nodes/\"\n\n        if not base_path.startswith(prefix):\n            return \"invalid source format\"\n\n        mqtt_path \u003d base_path[len(prefix):]\n\n        # ---------------------------------\n        # 5. Transform path\n        # ---------------------------------\n        parts \u003d mqtt_path.split(\"/\")\n\n        if len(parts) \u003c 3:\n            return \"invalid mqtt path\"\n\n        group_id \u003d parts[0]\n        node_id \u003d parts[1]\n        device_id \u003d parts[2]\n\n        transformed_path \u003d \"spBv1.0/{}/DDATA/{}/{}\".format(\n            group_id,\n            node_id,\n            device_id\n        )\n\n        # ---------------------------------\n        # 6. Search wrapper.log\n        # Ubuntu path\n        # ---------------------------------\n        log_file \u003d \"/usr/local/bin/ignition/logs/wrapper.log\"\n\n        last_match \u003d \"no log found\"\n\n        try:\n\n            with open(log_file, \"r\") as f:\n\n                for line in f:\n\n                    if transformed_path in line:\n                        last_match \u003d line.strip()\n\n        except Exception as e:\n            return \"log read error: {}\".format(str(e))\n\n        # ---------------------------------\n        # 7. Return result\n        # ---------------------------------\n        return last_match\n\n    except:\n        return \"select machine\"",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "marginLeft": "2%",
+                    "paddingLeft": "2%"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "40%"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "paddingTop": "5%"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "30%"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "basis": "400px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "paddingLeft": "2%",
+        "paddingTop": "1%"
+      },
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

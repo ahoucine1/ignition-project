@@ -1,0 +1,112 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "_ScanMode",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "_DeviceId",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "Boolean",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "_NoError",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "Boolean",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "_Error",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "_Description",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "Boolean",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "_Enabled",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "Boolean",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "_Simulated",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "Int8",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "_SecondsInError",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "Boolean",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "_DemandPoll",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "Int8",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "_ScanRateMs",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "_ActiveTagCount",
+    "tagType": "AtomicTag"
+  }
+]

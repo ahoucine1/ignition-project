@@ -1,0 +1,16 @@
+[
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "KeepAlive_REQ_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "KeepAlive_RES_XML",
+    "tagType": "AtomicTag"
+  }
+]

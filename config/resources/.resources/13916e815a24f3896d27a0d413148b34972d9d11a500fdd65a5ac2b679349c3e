@@ -1,0 +1,80 @@
+[
+  {
+    "SparkplugGroupId": "group1",
+    "name": "sensor 2",
+    "SparkplugDeviceId": "device1",
+    "typeId": "sensor",
+    "parameters": {
+      "device name": "AH_training_simulator",
+      "sensor num": 2
+    },
+    "tagType": "UdtInstance",
+    "SparkplugEdgeNodeId": "node1",
+    "tags": [
+      {
+        "dataType": "Float8",
+        "value": 101.20763836219476,
+        "name": "Humidity",
+        "tagType": "AtomicTag"
+      },
+      {
+        "dataType": "Float8",
+        "value": 94.93193586352697,
+        "name": "Temperature",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "SparkplugGroupId": "group1",
+    "name": "sensor 3",
+    "SparkplugDeviceId": "device1",
+    "typeId": "sensor",
+    "parameters": {
+      "device name": "AH_training_simulator",
+      "sensor num": 3
+    },
+    "tagType": "UdtInstance",
+    "SparkplugEdgeNodeId": "node1",
+    "tags": [
+      {
+        "dataType": "Float8",
+        "value": 100.03054457510922,
+        "name": "Humidity",
+        "tagType": "AtomicTag"
+      },
+      {
+        "dataType": "Float8",
+        "value": 90.03073155958513,
+        "name": "Temperature",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "SparkplugGroupId": "group1",
+    "name": "sensor 1",
+    "SparkplugDeviceId": "device1",
+    "typeId": "sensor",
+    "parameters": {
+      "device name": "AH_training_simulator",
+      "sensor num": 1
+    },
+    "tagType": "UdtInstance",
+    "SparkplugEdgeNodeId": "node1",
+    "tags": [
+      {
+        "dataType": "Float8",
+        "value": 100.45090902749196,
+        "name": "Humidity",
+        "tagType": "AtomicTag"
+      },
+      {
+        "dataType": "Float8",
+        "value": 100.62870101646408,
+        "name": "Temperature",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "PROCESS_INTERLOCK_REQ_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "LOAD_RESP_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "KeepAlive_REQ_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "PART_IN_SERIAL_NUMBER",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "KeepAlive_RES_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "PROCESS_INTERLOCK_RESP_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "ALIVE",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "EVENT_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "PROCESS_INTERLOCK_RESP",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "STATE",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "LOAD_REQ",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "PART_IN",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "PROGRAM_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "PROGRAM",
+    "tagType": "AtomicTag"
+  }
+]

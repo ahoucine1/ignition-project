@@ -1,0 +1,16 @@
+[
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "GENERIC_DATA_O2AnalyseActualValue",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "PROCESS_INTERLOCK_REQ_XML",
+    "tagType": "AtomicTag"
+  }
+]

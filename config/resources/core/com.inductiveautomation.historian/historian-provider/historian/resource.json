@@ -10,10 +10,10 @@
   "attributes": {
     "lastModification": {
       "actor": "ahoucine",
-      "timestamp": "2026-05-20T11:28:24Z"
+      "timestamp": "2026-05-20T16:30:41Z"
     },
     "uuid": "20204ac1-ba8d-457a-9f8b-30fd9841ab95",
-    "lastModificationSignature": "6711662b35e1919a77c37a14388fca5cbf74c57c7596dac10807a1d80afea28a",
-    "enabled": false
+    "lastModificationSignature": "07cf333a70b01651016a9c87a2f05a7b18c5f13f2e6c43b23aaaa981f8e336cf",
+    "enabled": true
   }
 }

@@ -1,0 +1,23 @@
+[
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "INS_RES_RES",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "INS_RES_REQ",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "INS_RES_RES_Error",
+    "tagType": "AtomicTag"
+  }
+]

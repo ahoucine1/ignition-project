@@ -1,0 +1,9 @@
+[
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "BOARD_OUT_RES_Error",
+    "tagType": "AtomicTag"
+  }
+]

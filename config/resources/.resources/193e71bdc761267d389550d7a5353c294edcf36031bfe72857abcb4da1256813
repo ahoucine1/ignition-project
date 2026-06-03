@@ -1,0 +1,30 @@
+[
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "ALIVE",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "PROGRAM_REAL",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "PROGRAM_RES_ERROR",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "UNLOCK_FIRST_STATION",
+    "tagType": "AtomicTag"
+  }
+]

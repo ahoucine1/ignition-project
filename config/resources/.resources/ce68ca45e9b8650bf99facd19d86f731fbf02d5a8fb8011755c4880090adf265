@@ -1,0 +1,10 @@
+[
+  {
+    "usr": {
+      "dataType": "Float8",
+      "StoreAndForward": true
+    },
+    "name": "High alarm",
+    "tagType": "AtomicTag"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "PROGRAM_RES",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "PROGRAM_RES_ERROR",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "PROGRAM_REQ",
+    "tagType": "AtomicTag"
+  }
+]

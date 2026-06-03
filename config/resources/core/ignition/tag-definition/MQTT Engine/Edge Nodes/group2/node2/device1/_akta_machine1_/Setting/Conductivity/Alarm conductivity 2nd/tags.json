@@ -1,14 +1,6 @@
 [
   {
     "usr": {
-      "dataType": "Float8",
-      "StoreAndForward": true
-    },
-    "name": "High alarm",
-    "tagType": "AtomicTag"
-  },
-  {
-    "usr": {
       "dataType": "Int4"
     },
     "name": "Mode",
@@ -19,6 +11,14 @@
       "dataType": "Float8"
     },
     "name": "Low alarm",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Float8",
+      "StoreAndForward": true
+    },
+    "name": "High alarm",
     "tagType": "AtomicTag"
   }
 ]

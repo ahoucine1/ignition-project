@@ -1,0 +1,12 @@
+[
+  {
+    "usr": {
+      "SparkplugGroupId": "group3",
+      "dataType": "String",
+      "SparkplugDeviceId": "device3",
+      "SparkplugEdgeNodeId": "node3"
+    },
+    "name": "ALIVE",
+    "tagType": "AtomicTag"
+  }
+]

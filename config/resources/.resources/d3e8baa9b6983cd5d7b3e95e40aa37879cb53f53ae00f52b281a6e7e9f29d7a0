@@ -1,0 +1,71 @@
+[
+  {
+    "name": "sensor 3",
+    "typeId": "sensor",
+    "parameters": {
+      "device name": "AH_training_simulator_2",
+      "sensor num": 3
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "dataType": "Float8",
+        "value": 99.42524808944034,
+        "name": "Humidity",
+        "tagType": "AtomicTag"
+      },
+      {
+        "dataType": "Float8",
+        "value": 100.51907646466893,
+        "name": "Temperature",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "sensor 1",
+    "typeId": "sensor",
+    "parameters": {
+      "device name": "AH_training_simulator_2",
+      "sensor num": 1
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "dataType": "Float8",
+        "value": 121.92457381371402,
+        "name": "Humidity",
+        "tagType": "AtomicTag"
+      },
+      {
+        "dataType": "Float8",
+        "value": 99.59267887411879,
+        "name": "Temperature",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "sensor 2",
+    "typeId": "sensor",
+    "parameters": {
+      "device name": "AH_training_simulator_2",
+      "sensor num": 2
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "dataType": "Float8",
+        "value": 89.14728127514081,
+        "name": "Humidity",
+        "tagType": "AtomicTag"
+      },
+      {
+        "dataType": "Float8",
+        "value": 98.43024008341925,
+        "name": "Temperature",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

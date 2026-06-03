@@ -1,0 +1,79 @@
+[
+  {
+    "usr": {
+      "dataType": "Boolean"
+    },
+    "name": "_Simulated",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "_DeviceId",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Boolean"
+    },
+    "name": "_Enabled",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "_ScanMode",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Boolean"
+    },
+    "name": "_NoError",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "_ActiveTagCount",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Boolean"
+    },
+    "name": "_Error",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Boolean"
+    },
+    "name": "_DemandPoll",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "_Description",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Int8"
+    },
+    "name": "_ScanRateMs",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Int8"
+    },
+    "name": "_SecondsInError",
+    "tagType": "AtomicTag"
+  }
+]

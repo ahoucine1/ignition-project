@@ -1,0 +1,37 @@
+[
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "PROCESS_INTERLOCK_REQ_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "PART_OUT_SERIAL_NUMBER",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "EVENT_XML",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "GENERIC_DATA_O2AnalyseActualValue",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "LOAD_REQ",
+    "tagType": "AtomicTag"
+  }
+]

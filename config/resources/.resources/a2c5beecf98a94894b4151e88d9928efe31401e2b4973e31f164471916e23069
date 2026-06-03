@@ -1,0 +1,24 @@
+[
+  {
+    "name": "OIC",
+    "typeId": "ConvoyeurModel",
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": "[MQTT Engine]Edge Nodes/group3/node3/device3/L02/OIC"
+      }
+    },
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "REHM",
+    "typeId": "REHM_MachineModel",
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": "[MQTT Engine]Edge Nodes/group3/node3/device3/L02/REHM"
+      }
+    },
+    "tagType": "UdtInstance"
+  }
+]

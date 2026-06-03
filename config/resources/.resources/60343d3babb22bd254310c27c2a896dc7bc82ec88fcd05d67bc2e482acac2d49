@@ -1,0 +1,16 @@
+[
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "LOAD_REQ",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "PART_IN_SERIAL_NUMBER",
+    "tagType": "AtomicTag"
+  }
+]

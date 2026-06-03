@@ -1,0 +1,84 @@
+[
+  {
+    "name": "MotorUDT",
+    "parameters": {
+      "MachineName": {
+        "dataType": "String",
+        "value": ""
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "opcItemPath": "ns\u003d1;s\u003d[PLC]{MachineName}.Speed",
+        "dataType": "Float4",
+        "name": "Speed",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "ns\u003d1;s\u003d[PLC]{MachineName}.Status",
+        "dataType": "Boolean",
+        "name": "Status",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "sensor",
+    "typeId": null,
+    "parameters": {
+      "device name": {
+        "dataType": "String",
+        "value": null
+      },
+      "sensor num": {
+        "dataType": "Integer",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "ns\u003d1;s\u003d[{device name}]Overview/Sensor {sensor num}/Humidity"
+        },
+        "valueSource": "opc",
+        "dataType": "Float8",
+        "name": "Humidity",
+        "tagType": "AtomicTag",
+        "opcServer": "Ignition OPC UA Server"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "ns\u003d1;s\u003d[{device name}]Overview/Sensor {sensor num}/Temperature"
+        },
+        "valueSource": "opc",
+        "dataType": "Float8",
+        "name": "Temperature",
+        "tagType": "AtomicTag",
+        "opcServer": "Ignition OPC UA Server"
+      }
+    ]
+  },
+  {
+    "name": "test_import",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{TagName}.test"
+        },
+        "valueSource": "reference",
+        "dataType": "String",
+        "name": "New Tag",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

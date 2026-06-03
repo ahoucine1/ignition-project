@@ -1,0 +1,36 @@
+{
+  "connectURL": "jdbc:postgresql://localhost:5433/ek_litmus_db",
+  "connectionProps": "",
+  "connectionResetParams": "",
+  "defaultTransactionLevel": "DEFAULT",
+  "driver": "PostgreSQL",
+  "evictionRate": -1,
+  "evictionTests": 3,
+  "evictionTime": 1800000,
+  "failoverMode": "STANDARD",
+  "failoverProfile": "",
+  "includeSchemaInTableName": false,
+  "password": {
+    "data": {
+      "ciphertext": "rW2jrCqoY4M",
+      "encrypted_key": "FrOB9U-MJT3winPjAAvSU61uLHnYrnb70CLIaptl-c71HkURGF2udg",
+      "iv": "QZ2OWL0dq2btuKVR",
+      "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzc5Mjc1NjIzLCJ6aXAiOiJERUYifQ",
+      "tag": "u0Y4Rtu_BCRA222V9VJnJw"
+    },
+    "type": "Embedded"
+  },
+  "poolInitSize": 0,
+  "poolMaxActive": 8,
+  "poolMaxIdle": 8,
+  "poolMaxWait": 5000,
+  "poolMinIdle": 0,
+  "slowQueryLogThreshold": 60000,
+  "testOnBorrow": true,
+  "testOnReturn": false,
+  "testWhileIdle": false,
+  "translator": "POSTGRES",
+  "username": "ek_user",
+  "validationQuery": "SELECT 1",
+  "validationSleepTime": 10000
+}

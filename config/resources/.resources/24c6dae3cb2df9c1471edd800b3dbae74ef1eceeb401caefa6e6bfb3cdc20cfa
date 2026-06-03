@@ -1,0 +1,16 @@
+[
+  {
+    "usr": {
+      "dataType": "Int2"
+    },
+    "name": "HOA",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Int8"
+    },
+    "name": "Pattern",
+    "tagType": "AtomicTag"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "usr": {
+      "dataType": "Float8"
+    },
+    "name": "Temperature",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Float8",
+      "historyProvider": "core_historian",
+      "historyEnabled": true
+    },
+    "name": "Humidity",
+    "tagType": "AtomicTag"
+  }
+]

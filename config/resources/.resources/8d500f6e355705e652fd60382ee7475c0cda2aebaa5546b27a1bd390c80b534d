@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Test_Machine",
+    "typeId": "[UNS]_types_/AKTA_Chromatography",
+    "parameters": {
+      "area": {
+        "dataType": "String",
+        "value": "Area 1"
+      },
+      "site": {
+        "dataType": "String",
+        "value": "Site 3"
+      },
+      "line": {
+        "dataType": "String",
+        "value": "Line 1"
+      },
+      "machine": {
+        "dataType": "String",
+        "value": "Machine"
+      },
+      "source": {
+        "dataType": "String",
+        "value": "[MQTT Engine]Edge Nodes/group2/node2/device1/_akta_machine1_"
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "name": "ProcessValues",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "name": "Alarms",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "name": "Conductivity",
+                "tagType": "Folder",
+                "tags": [
+                  {
+                    "name": "Cond2nd",
+                    "tagType": "Folder",
+                    "tags": [
+                      {
+                        "historyProvider": "core_historian",
+                        "historyEnabled": false,
+                        "name": "High_Alarm",
+                        "tagType": "AtomicTag"
+                      },
+                      {
+                        "historyProvider": "core_historian",
+                        "historyEnabled": false,
+                        "name": "Low_Alarm",
+                        "tagType": "AtomicTag"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "EKRA",
+    "typeId": "EKRA_MachineModel",
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": "[MQTT Engine]Edge Nodes/group3/node3/device3/L02/EKRA"
+      }
+    },
+    "tagType": "UdtInstance"
+  }
+]

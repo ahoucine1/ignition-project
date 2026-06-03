@@ -1,0 +1,59 @@
+{
+  "pages": {
+    "/": {
+      "title": "",
+      "viewPath": "WYNSYS_Ignition_POC_WA1/Add_Machine/add_machine (2)"
+    },
+    "/add_machine": {
+      "title": "",
+      "viewPath": "WYNSYS_Ignition_POC_WA1/Add_Machine/browse_mqtt_2"
+    },
+    "/browse_mqtt": {
+      "title": "",
+      "viewPath": "WYNSYS_Ignition_POC_WA1/Add_Machine/add_machine (2)"
+    },
+    "/monitoring": {
+      "title": "",
+      "viewPath": "WYNSYS_Ignition_POC_WA1/Monitoring/Monitoring"
+    },
+    "/uns": {
+      "title": "",
+      "viewPath": "WYNSYS_Ignition_POC_WA1/Browse_UNS/browse_uns"
+    }
+  },
+  "sharedDocks": {
+    "bottom": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 75,
+        "viewParams": {},
+        "viewPath": "WYNSYS_Ignition_POC_WA1/Footer/Footer"
+      }
+    ],
+    "cornerPriority": "left-right",
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 100,
+        "viewParams": {},
+        "viewPath": "WYNSYS_Ignition_POC_WA1/Header/Header"
+      }
+    ]
+  }
+}

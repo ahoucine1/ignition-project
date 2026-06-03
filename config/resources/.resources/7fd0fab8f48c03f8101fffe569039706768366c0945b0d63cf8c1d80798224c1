@@ -1,0 +1,44 @@
+[
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "_ScanMode",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "_DeviceId",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Boolean"
+    },
+    "name": "_Error",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "String"
+    },
+    "name": "_Description",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Int8"
+    },
+    "name": "_SecondsInError",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Boolean"
+    },
+    "name": "_NoError",
+    "tagType": "AtomicTag"
+  }
+]

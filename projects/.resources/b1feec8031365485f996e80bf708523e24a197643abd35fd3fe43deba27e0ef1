@@ -1,0 +1,484 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label_5"
+            },
+            "props": {
+              "style": {
+                "fontWeight": "bold",
+                "marginTop": "5%"
+              },
+              "text": "Add New Machine"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "TagBrowseTree"
+            },
+            "position": {
+              "basis": "90%",
+              "grow": 1
+            },
+            "props": {
+              "root": {
+                "path": "[MQTT Engine]Edge Nodes"
+              },
+              "style": {
+                "marginBottom": "10%",
+                "marginLeft": "3%",
+                "marginRight": "3%",
+                "marginTop": "10%"
+              },
+              "width": "90%"
+            },
+            "type": "ia.display.tag-browse-tree"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\t# ---------------------------------------------------\n\t# GET VALUES FROM VIEW\n\t# ---------------------------------------------------\n\tself.parent.parent.getChild(\"root\").getChild(\"Dropdown\").props.value\n\tmachine_type \u003d self.parent.parent.getChild(\"root\").getChild(\"Dropdown\").props.value\n\t#site \u003d self.parent.parent.getChild(\"root\").getChild(\"site\").props.text\n\tsite \u003d self.parent.parent.getChild(\"root\").getChild(\"Dropdown_site\").props.value\n\t#area \u003d self.parent.parent.getChild(\"root\").getChild(\"area\").props.text\n\tarea \u003d self.parent.parent.getChild(\"root\").getChild(\"Dropdown_area\").props.value\n\t#line \u003d self.parent.parent.getChild(\"root\").getChild(\"line\").props.text\n\tline \u003d self.parent.parent.getChild(\"root\").getChild(\"Dropdown_line\").props.value\n\tmachine \u003d self.parent.parent.getChild(\"root\").getChild(\"machine\").props.text\n\tinstance_name \u003d self.parent.parent.getChild(\"root\").getChild(\"instance_name\").props.text\n\t\n\tselection \u003d self.getSibling(\"TagBrowseTree\").props.selection.values\n\t\n\t# ---------------------------------------------------\n\t# VALIDATION\n\t# ---------------------------------------------------\n\t\n\tselection \u003d self.getSibling(\"TagBrowseTree\").props.selection.values\n\n\tif (\n\t    not machine_type or\n\t    not site or\n\t    not area or\n\t    not line or\n\t    not machine or\n\t    not instance_name or\n\t    not selection or\n\t    len(selection) \u003d\u003d 0\n\t):\n\t\n\t    system.perspective.openPopup(\n\t        id\u003d\"validationPopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\n\t            \"display\": \"Please fill in all fields and select a source tag.\"\n\t        },\n\t        title\u003d\"Error\",\n\t        modal\u003dTrue\n\t    )\n\t\n\t    return\n\t\n\t# ---------------------------------------------------\n\t# SAFE SOURCE TAG\n\t# ---------------------------------------------------\n\t\n\tsource_tag_path \u003d str(selection[0])\n\t\n\t# ---------------------------------------------------\n\t# BUILD PATH\n\t# ---------------------------------------------------\n\t\n\tuns_provider \u003d \"UNS\"\n\t\n\tbase_path \u003d \"[{}]/Pharma/{}/{}/{}/{}\".format(\n\t    uns_provider,\n\t    site,\n\t    area,\n\t    line,\n\t    machine\n\t)\n\t\n\tinstance_path \u003d \"{}/{}\".format(base_path, instance_name)\n\t\n\tudt_type_path \u003d machine_type\n\t\n\t# ---------------------------------------------------\n\t# CHECK DUPLICATE\n\t# ---------------------------------------------------\n\t\n\tif system.tag.exists(instance_path):\n\t\n\t    system.perspective.openPopup(\n\t        id\u003d\"duplicatePopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\n\t            \"display\": \"Machine \u0027{}\u0027 already exists in this location.\".format(instance_name)\n\t        },\n\t        title\u003d\"Duplicate Error\",\n\t        modal\u003dTrue\n\t    )\n\t\n\t    return\n\t\n\t# ---------------------------------------------------\n\t# CREATE UDT INSTANCE\n\t# ---------------------------------------------------\n\t\n\ttry:\n\t\n\t    tag_definition \u003d {\n\t        \"name\": instance_name,\n\t        \"tagType\": \"UdtInstance\",\n\t        \"typeId\": udt_type_path,\n\t        \"parameters\": {\n\t            \"site\": site,\n\t            \"area\": area,\n\t            \"line\": line,\n\t            \"machine\": machine,\n\t            \"source\": source_tag_path\n\t        }\n\t    }\n\t\n\t    system.tag.configure(base_path, [tag_definition])\n\t    self.getSibling(\"TagBrowseTree\").props.selection \u003d {\n    \t\"values\": []\n\t\t}\n\t\n\t    # ---------------------------------------------------\n\t    # SUCCESS POPUP\n\t    # ---------------------------------------------------\n\t\n\t    system.perspective.openPopup(\n\t        id\u003d\"validationPopup\",\n\t        view\u003d\"ValidationPopup\",\n\t        params\u003d{\n\t            \"instance_path\": instance_path\n\t        },\n\t        title\u003d\"Validation\",\n\t        modal\u003dTrue\n\t    )\n\t\n\texcept Exception as e:\n\t\n\t    # ---------------------------------------------------\n\t    # ERROR POPUP\n\t    # ---------------------------------------------------\n\t\n\t    system.perspective.openPopup(\n\t        id\u003d\"errorPopup\",\n\t        view\u003d\"ErrorPopup\",\n\t        params\u003d{\n\t            \"display\": \"Error creating machine: {}\".format(str(e))\n\t        },\n\t        title\u003d\"Error\",\n\t        modal\u003dTrue\n\t    )"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "props": {
+              "image": {
+                "style": {
+                  "marginBottom": "5%"
+                }
+              },
+              "style": {
+                "marginBottom": "5%"
+              },
+              "text": "Create New Machine"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "33%"
+        },
+        "props": {
+          "alignItems": "center",
+          "direction": "column",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "props": {
+                  "text": "Site:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown_site"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.options": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[UNS]SiteList.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "placeholder": {
+                    "text": "Select Site"
+                  }
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_3"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label_2"
+                },
+                "props": {
+                  "text": "Line:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown_line"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.options": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[UNS]LineList.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "placeholder": {
+                    "text": "Select Line"
+                  }
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label_6"
+                },
+                "props": {
+                  "text": "Machine Model:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "options": [
+                    {
+                      "label": "AKTA Model",
+                      "value": "[UNS]_types_/AKTA_Chromatography"
+                    },
+                    {
+                      "label": "Sensor udt",
+                      "value": "[UNS]_types_/sensor"
+                    }
+                  ],
+                  "placeholder": {
+                    "text": "Select Machine Type"
+                  }
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label_3"
+                },
+                "props": {
+                  "text": "Machine:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "machine"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "placeholder": "enter machine"
+                },
+                "type": "ia.input.text-field"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label_4"
+                },
+                "props": {
+                  "text": "Instance Name:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "instance_name"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "placeholder": "enter instance name"
+                },
+                "type": "ia.input.text-field"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_4"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label_1"
+                },
+                "props": {
+                  "text": "Area:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown_area"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.options": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[UNS]AreaList.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "placeholder": {
+                    "text": "Select Area"
+                  }
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_2"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "34%"
+        },
+        "props": {
+          "direction": "column",
+          "justify": "center",
+          "style": {
+            "paddingLeft": "3%",
+            "paddingRight": "3%"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label_5"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "style": {
+                    "fontWeight": "bold"
+                  },
+                  "text": "Mass upload"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "20%"
+            },
+            "props": {
+              "alignItems": "center",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "events": {
+                  "component": {
+                    "onActionPerformed": {
+                      "config": {
+                        "script": "\t\t# 1. ----\u003e THIS IS THE CRITICAL PART ON UBUNTU \u003c----\n\t# Use the correct Linux path to your file.\n\t# Adjust the path based on your \u0027Base Installation\u0027 from Step 1.\n\tfile_path \u003d \"/usr/local/bin/ignition/data/templates/Template.xlsx\"\n\t# -----------------------------------------------\n\t\n\t# 2. Load the file\u0027s data as bytes\n\tfile_data \u003d system.file.readFileAsBytes(file_path)\n\t\n\t# 3. Trigger the download with a suggested filename\n\tsystem.perspective.download(\"MyTemplate.xlsx\", file_data)"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "Button_0"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "text": "Download Template"
+                },
+                "type": "ia.input.button"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "events": {
+                  "dom": {
+                    "onClick": {
+                      "config": {
+                        "script": "\t\tsystem.perspective.openPopup(\n    id\u003d\"MassUploadPopup\",\n    view\u003d\"MassUploadPopup\",\n    params\u003d{},\n    title\u003d\"Mass Upload\",\n    modal\u003dTrue\n)"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "Icon"
+                },
+                "props": {
+                  "path": "material/cloud_upload",
+                  "style": {
+                    "color": "#0000FF",
+                    "cursor": "pointer"
+                  }
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "Label_7"
+                },
+                "props": {
+                  "text": "Upload (.xlsx) file"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "props": {
+              "alignItems": "center",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "basis": "33%"
+        },
+        "props": {
+          "direction": "column",
+          "justify": "space-evenly"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

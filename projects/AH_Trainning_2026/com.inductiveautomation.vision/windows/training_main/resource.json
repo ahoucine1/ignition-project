@@ -4,14 +4,15 @@
   "restricted": false,
   "overridable": true,
   "files": [
-    "window.bin"
+    "window.bin",
+    "thumbnail.png"
   ],
   "attributes": {
     "xml-format-version": 1,
-    "lastModificationSignature": "50c6376801ce98659bafa687d3953944f06bde6a31d25c5808311bbf53ade837",
+    "lastModificationSignature": "c591d2e1ead65cd7e950c03f578f2f1cff2fbe55b653b2e88715546b924ec231",
     "lastModification": {
       "actor": "ahoucine",
-      "timestamp": "2026-04-21T14:15:52Z"
+      "timestamp": "2026-05-21T14:10:05Z"
     },
     "open-on-start": true
   }

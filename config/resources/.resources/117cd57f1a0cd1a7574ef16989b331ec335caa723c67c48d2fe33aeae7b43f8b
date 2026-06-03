@@ -1,0 +1,2625 @@
+[
+  {
+    "name": "ConvoyeurModel",
+    "parameters": {
+      "machine": {
+        "dataType": "String",
+        "value": ""
+      },
+      "source": {
+        "dataType": "String",
+        "value": ""
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "Board",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.BOARD_OUT"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "BOARD_OUT",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.BOARD_IN_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "BOARD_IN_XML",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.BOARD_OUT_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "BOARD_OUT_XML",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.BOARD_IN"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "BOARD_IN",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "Engineering",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.ENGINEERING_MODE"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "ENGINEERING_MODE",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "Errors",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.ERROR_TXT"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "ERROR_TXT",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.ERROR_ID"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "ERROR_ID",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "OutletControl",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.OUTLET_LOCKED"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "OUTLET_LOCKED",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.REQ_UNLOCK_OUTLET"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "REQ_UNLOCK_OUTLET",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.REQ_UNLOCK_OUTLET_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "REQ_UNLOCK_OUTLET_XML",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.REQ_LOCK_OUTLET_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "REQ_LOCK_OUTLET_XML",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "Status",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.STATE"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "STATE",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.EMPTY"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "EMPTY",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.STATE_RES_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "STATE_RES_XML",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.{machine}.EQUIP_STATUS"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "EQUIP_STATUS",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Base_With_Alarms",
+    "typeId": "Base",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "Alarms",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "reference",
+            "name": "Alarm_Mode",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "High_Alarm",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Low_Alarm",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Four REHM",
+    "typeId": "Base_With_OEE",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "ProcessValues",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "name": "Part Handling",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "name": "PartIn",
+                "tagType": "Folder",
+                "tags": [
+                  {
+                    "sourceTagPath": {
+                      "bindType": "parameter",
+                      "binding": "{source}/"
+                    },
+                    "valueSource": "reference",
+                    "dataType": "String",
+                    "name": "PART_SERIAL_NUMBER",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "sourceTagPath": {
+                      "bindType": "parameter",
+                      "binding": "{source}/"
+                    },
+                    "valueSource": "reference",
+                    "dataType": "String",
+                    "name": "PART",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "sourceTagPath": {
+                      "bindType": "parameter",
+                      "binding": "{source}/"
+                    },
+                    "valueSource": "reference",
+                    "dataType": "String",
+                    "name": "PART_XML",
+                    "tagType": "AtomicTag"
+                  }
+                ]
+              },
+              {
+                "name": "PartOut",
+                "tagType": "Folder",
+                "tags": [
+                  {
+                    "sourceTagPath": {
+                      "bindType": "parameter",
+                      "binding": "{source}/"
+                    },
+                    "valueSource": "reference",
+                    "dataType": "String",
+                    "name": "PART",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "sourceTagPath": {
+                      "bindType": "parameter",
+                      "binding": "{source}/"
+                    },
+                    "valueSource": "reference",
+                    "dataType": "String",
+                    "name": "PART_XML",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "sourceTagPath": {
+                      "bindType": "parameter",
+                      "binding": "{source}/"
+                    },
+                    "valueSource": "reference",
+                    "dataType": "String",
+                    "name": "PART_SERIAL_NUMBER",
+                    "tagType": "AtomicTag"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Program Management",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "LOAD_REQ_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "LOAD_RESP_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PROGRAM",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PROGRAM_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "LOAD_RESP_Error",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "LOAD_REQ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PROGRAM_REQ_XML",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "KeepAlive",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "KeepAlive_REQ_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "KeepAlive_RES_XML",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Events",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "EVENT_CATEGORY",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "EVENT_NUM",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "EVENT_COME",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "EVENT_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "EVENT_DESCRIPTION",
+                "tagType": "AtomicTag"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BaseModel",
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": ""
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "Board",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.BOARD_IN_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "BOARD_IN_XML",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.BOARD_OUT_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "BOARD_OUT_XML",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.BOARD_IN"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "BOARD_IN",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.BOARD_OUT"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "BOARD_OUT",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "Engineering",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.ENGINEERING_MODE"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "ENGINEERING_MODE",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "KeepAlive",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.KeepAlive_RES_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "KeepAlive_RES_XML",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.KeepAlive_REQ_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "KeepAlive_REQ_XML",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "Program",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.PROGRAM"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "PROGRAM",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.PROGRAM_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "PROGRAM_XML",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "Status",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.ALIVE"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "ALIVE",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.STATE"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "STATE",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.STATE_ErrorText"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "STATE_ErrorText",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.STATE_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "STATE_XML",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Automated_Xray_Inspection",
+    "typeId": "Base_With_OEE",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "ProcessValues",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "name": "Errors",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "ERROR_TXT",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Board Handling",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "BOARD_OUT_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "BOARD_IN",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "ALLOW_ENTERING_PCB",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "BOARD_IN_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "BOARD_OUT",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Program Management",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PROGRAM_LOAD_REQ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PROGRAM_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PROGRAM",
+                "tagType": "AtomicTag"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Base_with_OEE_Alarms",
+    "typeId": "Base_With_OEE",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "Alarms",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "reference",
+            "name": "Alarm_Mode",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "High_Alarm",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Low_Alarm",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Base",
+    "typeId": null,
+    "parameters": {
+      "area": {
+        "dataType": "String",
+        "value": null
+      },
+      "site": {
+        "dataType": "String",
+        "value": null
+      },
+      "machine": {
+        "dataType": "String",
+        "value": null
+      },
+      "line": {
+        "dataType": "String",
+        "value": null
+      },
+      "source": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "Location",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "reference",
+            "name": "Machine",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Entreprise",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Line",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Site",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Area",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "Machine Data",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "reference",
+            "name": "Created_by",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Machine_ID",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "SchemaVersion",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Laststop",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Status",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Changed_by",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "LastStart",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "EKRA",
+    "typeId": "Base_With_OEE",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "Process values",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "name": "Information",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "INFO_XML",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Panel In Handling",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ_RES",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ_MsgID",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_RES_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ_RefCode",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ_RES_ErrorTXT",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ_Station",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ_XML",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "System Status",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "STATE_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "STATE",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "STATE_ErrorID",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "ENGINEERING_MODE",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "ALIVE",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "STATE_ErrorText",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Program_Setup Management",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PROGRAM",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "LOAD_SETUP_REQ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "LOAD_SETUP_RES_Error",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "LOAD_SETUP_RES_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "LOAD_SETUP_REQ_XML",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "KeepAlive",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "KeepAlive_REQ_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "KeepAlive_RES_XML",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Panel Out Handling",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ_MsgID",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ_Station",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_RES_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ_RES_ErrorTXT",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ_RES",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PANEL_REQ_RefCode",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Automatic Start",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "AUTOMATIC_START_REQ_XML",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "AUTOMATIC_START_RES_XML",
+                "tagType": "AtomicTag"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AKTA_Chromatography",
+    "typeId": "Base",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "ProcessValues",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "name": "Batch",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "Currentblock",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "RunLog ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Currentmethod",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Currentresult",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "CurrentScouting",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Fractions",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Injections",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "CurrentbatchId",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Curves",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 15",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 4",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 12",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 10",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 16",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 1",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 8",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 3",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 5",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 2",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 9",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 6",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 14",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 11",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 7",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 18",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 13",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "SystemFlowCurve 17",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Alarms",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "name": "UV",
+                "tagType": "Folder",
+                "tags": [
+                  {
+                    "name": "UV 2nd",
+                    "tagType": "Folder",
+                    "tags": [
+                      {
+                        "valueSource": "reference",
+                        "name": "Mode",
+                        "tagType": "AtomicTag"
+                      },
+                      {
+                        "valueSource": "reference",
+                        "name": "Low alarm",
+                        "tagType": "AtomicTag"
+                      },
+                      {
+                        "valueSource": "reference",
+                        "name": "High alarm",
+                        "tagType": "AtomicTag"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "UV1",
+                    "tagType": "Folder",
+                    "tags": [
+                      {
+                        "valueSource": "reference",
+                        "name": "Low alarm",
+                        "tagType": "AtomicTag"
+                      },
+                      {
+                        "valueSource": "reference",
+                        "name": "Mode",
+                        "tagType": "AtomicTag"
+                      },
+                      {
+                        "valueSource": "reference",
+                        "name": "High alarm",
+                        "tagType": "AtomicTag"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "system pressure",
+                "tagType": "Folder",
+                "tags": [
+                  {
+                    "valueSource": "reference",
+                    "name": "Low alarm",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "valueSource": "reference",
+                    "name": "High alarm",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "valueSource": "reference",
+                    "name": "Mode",
+                    "tagType": "AtomicTag"
+                  }
+                ]
+              },
+              {
+                "name": "Delta column pressure",
+                "tagType": "Folder",
+                "tags": [
+                  {
+                    "valueSource": "reference",
+                    "name": "Mode",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "valueSource": "reference",
+                    "name": "Low alarm",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "valueSource": "reference",
+                    "name": "High alarm",
+                    "tagType": "AtomicTag"
+                  }
+                ]
+              },
+              {
+                "name": "Conductivity",
+                "tagType": "Folder",
+                "tags": [
+                  {
+                    "name": "Cond2nd",
+                    "tagType": "Folder",
+                    "tags": [
+                      {
+                        "sourceTagPath": {
+                          "bindType": "parameter",
+                          "binding": "{source}/Setting/Conductivity/Alarm conductivity 2nd/Low alarm"
+                        },
+                        "valueSource": "reference",
+                        "eventScripts": [
+                          {
+                            "eventid": "valueChanged",
+                            "script": "\timport json\n\t\n\t# 1. Get tag path as string\n\ttag_path_str \u003d str(tagPath)\n\t\n\t# 2. MQTT Transmission server name\n\tMQTT_SERVER_NAME \u003d \"Chariot SCADA\"\n\t\n\t# 3. Value, quality, timestamp\n\tnew_value \u003d currentValue.value\n\ttimestamp_ms \u003d currentValue.timestamp.getTime()\n\t\n\t# 4. Quality to serializable format\n\tquality_obj \u003d currentValue.quality\n\tif hasattr(quality_obj, \u0027value\u0027):\n\t    quality_code \u003d quality_obj.value\n\telse:\n\t    try:\n\t        quality_code \u003d int(quality_obj)\n\t    except:\n\t        quality_code \u003d str(quality_obj)\n\t\n\t# 5. Get parent tag path\n\tif hasattr(tagPath, \u0027getParent\u0027):\n\t    parent_obj \u003d tagPath.getParent()\n\t    parent_path_str \u003d str(parent_obj) if parent_obj else \"\"\n\telse:\n\t    parts \u003d tag_path_str.split(\u0027/\u0027)\n\t    parent_path_str \u003d \u0027/\u0027.join(parts[:-1]) if len(parts) \u003e 1 else \"\"\n\t\n\t\n\t# 7. Build MQTT topic (remove [UNS]/ prefix)\n\tif tag_path_str.startswith(\"[UNS]\"):\n\t    mqtt_topic \u003d tag_path_str[5:]\n\telse:\n\t    mqtt_topic \u003d tag_path_str\n\t    \n\t# generate name\n\tparts \u003d mqtt_topic.split(\u0027/\u0027)\n\t# Take last two elements and join with space\n\tname \u003d \" \".join(parts[-2:])\n\t\n\t# 8. Payload\n\tpayload \u003d {\n\t    \"Name\": name,\n\t    \"Path\": mqtt_topic,\n\t    \"Datatype\": str(type(new_value).__name__),\n\t    \"Value\": new_value,\n\t    \"Unit\": \"mS/cm\",\n\t    \"Timestamp\": timestamp_ms,\n\t    \"Quality\": quality_code\n\t}\n\t\n\t# 9. Publish\n\tpayload_bytes \u003d json.dumps(payload).encode(\u0027utf-8\u0027)\n\tsystem.cirruslink.transmission.publish(MQTT_SERVER_NAME, mqtt_topic, payload_bytes, 1, False)"
+                          }
+                        ],
+                        "name": "Low_Alarm",
+                        "tagType": "AtomicTag"
+                      },
+                      {
+                        "sourceTagPath": {
+                          "bindType": "parameter",
+                          "binding": "{source}/Setting/Conductivity/Alarm conductivity 2nd/High alarm"
+                        },
+                        "valueSource": "reference",
+                        "eventScripts": [
+                          {
+                            "eventid": "valueChanged",
+                            "script": "\timport json\n\t\n\t# 1. Get tag path as string\n\ttag_path_str \u003d str(tagPath)\n\t\n\t# 2. MQTT Transmission server name\n\tMQTT_SERVER_NAME \u003d \"Chariot SCADA\"\n\t\n\t# 3. Value, quality, timestamp\n\tnew_value \u003d currentValue.value\n\ttimestamp_ms \u003d currentValue.timestamp.getTime()\n\t\n\t# 4. Quality to serializable format\n\tquality_obj \u003d currentValue.quality\n\tif hasattr(quality_obj, \u0027value\u0027):\n\t    quality_code \u003d quality_obj.value\n\telse:\n\t    try:\n\t        quality_code \u003d int(quality_obj)\n\t    except:\n\t        quality_code \u003d str(quality_obj)\n\t\n\t# 5. Get parent tag path\n\tif hasattr(tagPath, \u0027getParent\u0027):\n\t    parent_obj \u003d tagPath.getParent()\n\t    parent_path_str \u003d str(parent_obj) if parent_obj else \"\"\n\telse:\n\t    parts \u003d tag_path_str.split(\u0027/\u0027)\n\t    parent_path_str \u003d \u0027/\u0027.join(parts[:-1]) if len(parts) \u003e 1 else \"\"\n\t\n\t\n\t# 7. Build MQTT topic (remove [UNS]/ prefix)\n\tif tag_path_str.startswith(\"[UNS]\"):\n\t    mqtt_topic \u003d tag_path_str[5:]\n\telse:\n\t    mqtt_topic \u003d tag_path_str\n\t    \n\t# generate name\n\tparts \u003d mqtt_topic.split(\u0027/\u0027)\n\t# Take last two elements and join with space\n\tname \u003d \" \".join(parts[-2:])\n\t\n\t# 8. Payload\n\tpayload \u003d {\n\t    \"Name\": name,\n\t    \"Path\": mqtt_topic,\n\t    \"Datatype\": str(type(new_value).__name__),\n\t    \"Value\": new_value,\n\t    \"Unit\": \"mS/cm\",\n\t    \"Timestamp\": timestamp_ms,\n\t    \"Quality\": quality_code\n\t}\n\t\n\t# 9. Publish\n\tpayload_bytes \u003d json.dumps(payload).encode(\u0027utf-8\u0027)\n\tsystem.cirruslink.transmission.publish(MQTT_SERVER_NAME, mqtt_topic, payload_bytes, 1, False)"
+                          }
+                        ],
+                        "name": "High_Alarm",
+                        "tagType": "AtomicTag"
+                      },
+                      {
+                        "sourceTagPath": {
+                          "bindType": "parameter",
+                          "binding": "{source}/Setting/Conductivity/Alarm conductivity 2nd/Mode"
+                        },
+                        "valueSource": "reference",
+                        "eventScripts": [
+                          {
+                            "eventid": "valueChanged",
+                            "script": "\n\timport json\n\t\n\t# 1. Get tag path as string\n\ttag_path_str \u003d str(tagPath)\n\t\n\t# 2. MQTT Transmission server name\n\tMQTT_SERVER_NAME \u003d \"Chariot SCADA\"\n\t\n\t# 3. Value, quality, timestamp\n\tnew_value \u003d currentValue.value\n\ttimestamp_ms \u003d currentValue.timestamp.getTime()\n\t\n\t# 4. Quality to serializable format\n\tquality_obj \u003d currentValue.quality\n\tif hasattr(quality_obj, \u0027value\u0027):\n\t    quality_code \u003d quality_obj.value\n\telse:\n\t    try:\n\t        quality_code \u003d int(quality_obj)\n\t    except:\n\t        quality_code \u003d str(quality_obj)\n\t\n\t# 5. Get parent tag path\n\tif hasattr(tagPath, \u0027getParent\u0027):\n\t    parent_obj \u003d tagPath.getParent()\n\t    parent_path_str \u003d str(parent_obj) if parent_obj else \"\"\n\telse:\n\t    parts \u003d tag_path_str.split(\u0027/\u0027)\n\t    parent_path_str \u003d \u0027/\u0027.join(parts[:-1]) if len(parts) \u003e 1 else \"\"\n\t\n\t# 7. Build MQTT topic (remove [UNS]/ prefix)\n\tif tag_path_str.startswith(\"[UNS]\"):\n\t    mqtt_topic \u003d tag_path_str[5:]\n\telse:\n\t    mqtt_topic \u003d tag_path_str\n\t\n\treturn_value \u003d \"\"\n\tif new_value:\n\t    return_value \u003d \"Enabled\"\n\telse:\n\t    return_value \u003d \"Disabled\"\n\t\n\t# generate name\n\tparts \u003d mqtt_topic.split(\u0027/\u0027)\n\t# Take last two elements and join with space\n\tname \u003d \" \".join(parts[-2:])\n\t\n\t# 8. Payload\n\tpayload \u003d {\n\t    \"Name\": name,\n\t    \"Path\": mqtt_topic,\n\t    \"Datatype\": str(type(new_value).__name__),\n\t    \"Mode\": return_value,\n\t    \"Timestamp\": timestamp_ms,\n\t    \"Quality\": quality_code\n\t}\n\t\n\t# 9. Publish\n\tpayload_bytes \u003d json.dumps(payload).encode(\u0027utf-8\u0027)\n\tsystem.cirruslink.transmission.publish(MQTT_SERVER_NAME, mqtt_topic, payload_bytes, 1, False)\n\t"
+                          }
+                        ],
+                        "name": "Mode",
+                        "tagType": "AtomicTag"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "cond",
+                    "tagType": "Folder"
+                  }
+                ]
+              },
+              {
+                "name": "sample pressure",
+                "tagType": "Folder",
+                "tags": [
+                  {
+                    "valueSource": "reference",
+                    "name": "High alarm",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "valueSource": "reference",
+                    "name": "Mode",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "valueSource": "reference",
+                    "name": "Low alarm",
+                    "tagType": "AtomicTag"
+                  }
+                ]
+              },
+              {
+                "name": "pH",
+                "tagType": "Folder",
+                "tags": [
+                  {
+                    "valueSource": "reference",
+                    "name": "Mode",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "valueSource": "reference",
+                    "name": "High alarm",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "valueSource": "reference",
+                    "name": "Low alarm",
+                    "tagType": "AtomicTag"
+                  }
+                ]
+              },
+              {
+                "name": "AirSensors",
+                "tagType": "Folder",
+                "tags": [
+                  {
+                    "valueSource": "reference",
+                    "name": "Low alarm",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "valueSource": "reference",
+                    "name": "High alarm",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "valueSource": "reference",
+                    "name": "Mode",
+                    "tagType": "AtomicTag"
+                  }
+                ]
+              },
+              {
+                "name": "pre column pressure",
+                "tagType": "Folder",
+                "tags": [
+                  {
+                    "valueSource": "reference",
+                    "name": "Low alarm",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "valueSource": "reference",
+                    "name": "Mode",
+                    "tagType": "AtomicTag"
+                  },
+                  {
+                    "valueSource": "reference",
+                    "name": "High alarm",
+                    "tagType": "AtomicTag"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Conductivity",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "Cond ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "CondTemp ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "CondTemp2nd ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Cond2nd ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "PercCond ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "PercCond2nd ",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Status",
+            "tagType": "Folder"
+          },
+          {
+            "name": "Concentration",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "ConcQ2",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "ConcQ3",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "ConcQ4",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "ConcQ1",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "ConcB ",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Timing",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "AccumulatedVolume",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "AccumulatedTime",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "BlockVolume",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "BlockTime ",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Temperature",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "FracTemp",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Valves",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "SampleInlet ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "InjectPosition ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "InletB",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "VersatileValve3 ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "VersatileValve4 ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "VersatileValve2 ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "VersatileValve1 ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "ValveX1 ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "ValveX2 ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "pHValve ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "LoopPosition ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "InletA",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "ColumnPosition ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "Outlet ",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "ph",
+            "tagType": "Folder"
+          },
+          {
+            "name": "State",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "Command",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "UserInControl ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "AssignState",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "InstrumentConnection",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "InstrumentStatusConnection",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "RunState",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Flow",
+            "tagType": "Folder"
+          },
+          {
+            "name": "AirSensors",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "valueSource": "reference",
+                "name": "AirExternal",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "AirInletA",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "AirInletB",
+                "tagType": "AtomicTag"
+              },
+              {
+                "valueSource": "reference",
+                "name": "AirSampleInlet",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "UV",
+            "tagType": "Folder"
+          },
+          {
+            "name": "Pressure",
+            "tagType": "Folder"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AXI_MachineModel",
+    "typeId": "BaseModel",
+    "parameters": {
+      "source": {
+        "dataType": "String",
+        "value": ""
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "Board",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.BOARD_IN_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "BOARD_IN_XML",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.BOARD_OUT_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "BOARD_OUT_XML",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.BOARD_IN"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "BOARD_IN",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.BOARD_OUT"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "BOARD_OUT",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "Engineering",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.ENGINEERING_MODE"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "ENGINEERING_MODE",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.AXI_ENGINEERING_MODE"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "AXI_ENGINEERING_MODE",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "KeepAlive",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.KeepAlive_RES_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "KeepAlive_RES_XML",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.KeepAlive_REQ_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "KeepAlive_REQ_XML",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "Program",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.PROGRAM"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "PROGRAM",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.PROGRAM_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "PROGRAM_XML",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.PROGRAM_LOAD_REQ"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "PROGRAM_LOAD_REQ",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "Status",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.ALIVE"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "ALIVE",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.STATE"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "STATE",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.ALLOW_ENTERING_PCB"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "ALLOW_ENTERING_PCB",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.STATE_XML"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "STATE_XML",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.STATE_ErrorText"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "STATE_ErrorText",
+            "tagType": "AtomicTag"
+          },
+          {
+            "sourceTagPath": {
+              "bindType": "parameter",
+              "binding": "{source}.ERROR_TXT"
+            },
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "ERROR_TXT",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bioreactor",
+    "typeId": "Base_with_OEE_Alarms",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "ProcessValues",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "name": "Execution",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Base_FlowRate",
+                "tagType": "AtomicTag"
+              },
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Oxygen_Uptake_Rate",
+                "tagType": "AtomicTag"
+              },
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "pH",
+                "tagType": "AtomicTag"
+              },
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Volume",
+                "tagType": "AtomicTag"
+              },
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Stir_Speed",
+                "tagType": "AtomicTag"
+              },
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Offgas_CO2_Percent",
+                "tagType": "AtomicTag"
+              },
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Feed1_FlowRate",
+                "tagType": "AtomicTag"
+              },
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Temperature",
+                "tagType": "AtomicTag"
+              },
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "CO2_Evolution_Rate",
+                "tagType": "AtomicTag"
+              },
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Temperature  12",
+                "tagType": "AtomicTag"
+              },
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Dissolved_Oxygen",
+                "tagType": "AtomicTag"
+              },
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Offgas_O2_Percent",
+                "tagType": "AtomicTag"
+              },
+              {
+                "value": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Air_Flow",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Lab",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "Batch_Name",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Total_Cells",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Viable_Cells",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Cell_Viability",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Accumulators",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Acc_Acid_Vol",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Acc_Antifoam_Vol",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Acc_Feed1_Vol",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Acc_Feed2_Vol",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "Float4",
+                "name": "Acc_Base_Vol",
+                "tagType": "AtomicTag"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SIPLACE",
+    "typeId": "Base_With_OEE",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "Machine Data",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "reference",
+            "dataType": "String",
+            "name": "ENGINEERING_MODE",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "ProcessValues",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "name": "Board Handling",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "BOARD_OUT_REQ",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "BOARD_OUT_RES",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "BOARD_OUT_RES_Error",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "UNLOCK_FIRST_STATION",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Counters",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "COUNT_TRACA",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "Program Management",
+            "tagType": "Folder",
+            "tags": [
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PROGRAM",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PROGRAM_REAL",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PROGRAM_RES",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PROGRAM_RES_ERROR",
+                "tagType": "AtomicTag"
+              },
+              {
+                "sourceTagPath": {
+                  "bindType": "parameter",
+                  "binding": "{source}/"
+                },
+                "valueSource": "reference",
+                "dataType": "String",
+                "name": "PROGRAM_REQ",
+                "tagType": "AtomicTag"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Base_With_OEE",
+    "typeId": "Base",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "OEE",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "reference",
+            "name": "OEE_Count",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Is_Bottleneck ",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "ack_Timestamp",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Shoplfoor_Count",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "TagName",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "SourceName",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Source_Timestamp ",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "OEE_Count_Method",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Shoplfoor_Count_Method",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "UOM",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Timestamp",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Count_Event_ID ",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "Shoplfoor_Count_Type",
+            "tagType": "AtomicTag"
+          },
+          {
+            "valueSource": "reference",
+            "name": "OEE_Count_Type",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  }
+]

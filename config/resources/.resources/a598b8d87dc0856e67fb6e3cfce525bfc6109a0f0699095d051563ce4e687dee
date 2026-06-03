@@ -1,0 +1,16 @@
+[
+  {
+    "usr": {
+      "dataType": "Int2"
+    },
+    "name": "RunControl",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Int2"
+    },
+    "name": "CurrentRun",
+    "tagType": "AtomicTag"
+  }
+]
