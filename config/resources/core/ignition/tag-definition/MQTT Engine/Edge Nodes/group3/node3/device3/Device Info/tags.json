@@ -1,27 +1,18 @@
 [
   {
     "usr": {
-      "dataType": "Boolean",
-      "documentation": "Writable tag to \u0027reset\u0027 the Device Info metrics"
+      "dataType": "DateTime",
+      "documentation": "The time at which the last DBIRTH message was received by MQTT Engine"
     },
-    "name": "Reset Info",
+    "name": "Online DateTime",
     "tagType": "AtomicTag"
   },
   {
     "usr": {
       "dataType": "Int8",
-      "documentation": "The size in bytes of the last DDATA that was received from the Device",
-      "engUnit": "bytes"
+      "documentation": "The number of DBIRTH messages since the last time the info metrics were reset via the Device Info/Reset Info tag"
     },
-    "name": "Last Data Message Size",
-    "tagType": "AtomicTag"
-  },
-  {
-    "usr": {
-      "dataType": "DateTime",
-      "documentation": "The time at which the last DBIRTH message was received by MQTT Engine"
-    },
-    "name": "Online DateTime",
+    "name": "Birth Count",
     "tagType": "AtomicTag"
   },
   {
@@ -35,9 +26,10 @@
   {
     "usr": {
       "dataType": "Int8",
-      "documentation": "The number of DBIRTH messages since the last time the info metrics were reset via the Device Info/Reset Info tag"
+      "documentation": "The size in bytes of the last DDATA that was received from the Device",
+      "engUnit": "bytes"
     },
-    "name": "Birth Count",
+    "name": "Last Data Message Size",
     "tagType": "AtomicTag"
   },
   {
@@ -60,6 +52,14 @@
   {
     "usr": {
       "dataType": "Int8",
+      "documentation": "The number of DDEATH messages since the last time the info metrics were reset via the Device Info/Reset Info tag"
+    },
+    "name": "Death Count",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "dataType": "Int8",
       "documentation": "The number of DDATA messages since the last time the info metrics were reset via the Device Info/Reset Info tag"
     },
     "name": "Data Message Count",
@@ -67,10 +67,10 @@
   },
   {
     "usr": {
-      "dataType": "Int8",
-      "documentation": "The number of DDEATH messages since the last time the info metrics were reset via the Device Info/Reset Info tag"
+      "dataType": "Boolean",
+      "documentation": "Writable tag to \u0027reset\u0027 the Device Info metrics"
     },
-    "name": "Death Count",
+    "name": "Reset Info",
     "tagType": "AtomicTag"
   }
 ]

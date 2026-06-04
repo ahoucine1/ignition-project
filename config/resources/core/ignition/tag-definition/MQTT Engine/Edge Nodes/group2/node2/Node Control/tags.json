@@ -1,18 +1,18 @@
 [
   {
     "usr": {
-      "readOnly": true,
-      "dataType": "Boolean"
-    },
-    "name": "Delete UNS Tags",
-    "tagType": "AtomicTag"
-  },
-  {
-    "usr": {
       "dataType": "Boolean",
       "documentation": "Writeable tag to request the Edge Node to resend its cached NBIRTH and DBIRTH messages without disconnecting or sending DEATH messages first"
     },
     "name": "Rebirth",
+    "tagType": "AtomicTag"
+  },
+  {
+    "usr": {
+      "readOnly": true,
+      "dataType": "Boolean"
+    },
+    "name": "Delete UNS Tags",
     "tagType": "AtomicTag"
   },
   {
