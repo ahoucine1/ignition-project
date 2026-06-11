@@ -1,4 +1,11 @@
 {
   "engineId": "database",
-  "flavorToStorageKeys": {}
+  "flavorToStorageKeys": {
+    "tag_history_data": [
+      {
+        "engineId": "database",
+        "sinkId": "historian"
+      }
+    ]
+  }
 }
